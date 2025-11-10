@@ -9,9 +9,9 @@
 
 **K-ProtoDiff** is a novel diffusion-based framework for high-fidelity **time series generation** that not only captures global temporal distributions but also preserves **localized key patterns** (e.g., abrupt changes, anomalies) critical for real-world decision-making.
 
-### By leveraging **adaptively learned key prototypes** and a novel **Reflection Sampling (R-Sampling)** strategy, K-ProtoDiff achieves state-of-the-art performance in both generation realism and structural fidelity.
+** By leveraging **adaptively learned key prototypes** and a novel **Reflection Sampling (R-Sampling)** strategy, K-ProtoDiff achieves state-of-the-art performance in both generation realism and structural fidelity.
 ![K-ProtoDiff Framework](image/img1.png)
-*Figure 1: Overall framework of K-ProtoDiff model. The framework generates time series conditioned on key prototypes extracted by the KPL module (top left). The forward diffusion transforms the original series into noise, while the reverse process performs R-sample (bottom right) to align the denoising trajectory with key prototypes, producing high-quality time series.*
+** Figure 1: Overall framework of K-ProtoDiff model. The framework generates time series conditioned on key prototypes extracted by the KPL module (top left). The forward diffusion transforms the original series into noise, while the reverse process performs R-sample (bottom right) to align the denoising trajectory with key prototypes, producing high-quality time series.*
 ---
 
 ## 🎯 Key Features
