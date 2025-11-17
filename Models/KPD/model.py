@@ -409,11 +409,7 @@ class KPD(nn.Module):
             target = x_start
 
         B, L, C = x_start.shape
-        # KPL
-        Z_p, attn = self.kpl(x_start)  # Z_p: (B, L, d_model), attn: (B, L, num_proto)
-        x_fused = torch.cat([x_start, Z_p], dim=-1)  # (B, L, C + d_model)
-        fusion_proj = nn.Linear(C + self.kpl.kpa.d_model, self.d_model).to(x_start.device)
-        x_fused = fusion_proj(x_fused)  # (B, L, d_model)
+        
         x_noisy = self.q_sample(x_start=x_start, t=t, noise=noise)  # (B, L, C)
         model_out = self.output(x_noisy, x_fused, t, padding_masks)  # (B, L, C)
         train_loss = self.loss_fn(model_out, target, reduction='none')  # (B, L, C)
@@ -432,9 +428,14 @@ class KPD(nn.Module):
 
     def forward(self, x, **kwargs):
         b, c, n, device, feature_size, = *x.shape, x.device, self.feature_size
+        # KPL
+        Z_p, attn = self.kpl(x_start)  # Z_p: (B, L, d_model), attn: (B, L, num_proto)
+        x_fused = torch.cat([x_start, Z_p], dim=-1)  # (B, L, C + d_model)
+        fusion_proj = nn.Linear(C + self.kpl.kpa.d_model, self.d_model).to(x_start.device)
+        x_fused = fusion_proj(x_fused)  # (B, L, d_model)
         assert n == feature_size, f'number of variable must be {feature_size}'
         t = torch.randint(0, self.num_timesteps, (b,), device=device).long()
-        return self._train_loss(x_start=x, t=t, **kwargs)
+        return self._train_loss(x_start=x_fused, t=t, **kwargs)
 
     def return_components(self, x, t: int):
         b, c, n, device, feature_size, = *x.shape, x.device, self.feature_size
@@ -782,4 +783,5 @@ def cosine_beta_schedule(timesteps, s=0.008):
     alphas_cumprod = torch.cos(((x / timesteps) + s) / (1 + s) * math.pi * 0.5) ** 2
     alphas_cumprod = alphas_cumprod / alphas_cumprod[0]
     betas = 1 - (alphas_cumprod[1:] / alphas_cumprod[:-1])
+
     return torch.clip(betas, 0, 0.999)
