@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+OUTPUT/
+Checkpoints_*/
+Data/datasets/
+*.npy
+*.pt
+*.pth
+.idea/
+.vscode/

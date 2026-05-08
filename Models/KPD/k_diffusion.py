@@ -152,13 +152,13 @@ class Model(nn.Module):
             reg_weight=None,
             **kwargs
     ):
-        super(KPD, self).__init__()
+        super(Model, self).__init__()
         self.d_model = d_model
         self.epsilon = 1E-5
         self.eta, self.use_ff = eta, use_ff
         self.seq_length = seq_length
         self.feature_size = feature_size
-        self.ff_weight = default(reg_weight, math.sqrt(self.seq_length) / 5
+        self.ff_weight = default(reg_weight, math.sqrt(self.seq_length) / 5)
         self.model = Transformer(n_feat=feature_size, n_channel=seq_length, n_layer_enc=n_layer_enc, n_layer_dec=n_layer_dec,
                                  n_heads=n_heads, attn_pdrop=attn_pd, resid_pdrop=resid_pd, mlp_hidden_times=mlp_hidden_times,
                                  max_len=seq_length, n_embd=d_model, conv_params=[kernel_size, padding_size], **kwargs)
