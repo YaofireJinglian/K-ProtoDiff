@@ -16,6 +16,17 @@ model:
     resid_pd: 0.1
     kernel_size: 5
     padding_size: 2
+    # KPL (prototype layer) settings
+    num_prototypes: 8
+    fl_ratio: 0.1
+    fh_ratio: 0.3
+    kan_taylor_hidden: 64
+    kan_Q: 4
+    kan_P: 3
+    # R-Sampling settings (only used by full p_sample loop, not DDIM fast_sample)
+    T_max: 1
+    lambda_step_ratio: 0.01
+    inv_guidance_scale: 0.0
 
 solver:
   base_lr: 1.0e-5

@@ -98,7 +98,7 @@ class MultiOrderKANBlock(nn.Module):
         self.kan_l = TaylorKAN(input_dim, hidden_dim=taylor_hidden, Q=Q, P=P)
         self.kan_m = TaylorKAN(input_dim, hidden_dim=taylor_hidden, Q=Q, P=P)
         self.kan_h = TaylorKAN(input_dim, hidden_dim=taylor_hidden, Q=Q, P=P)
-        self.fusion = nn.Linear(3, 1)  # 融合低中高频输出
+        self.fusion = nn.Linear(3, input_dim)  # (B,T,3) -> (B,T,input_dim)
 
     def forward(self, Fo_l, Fo_m, Fo_h):
         l_out = self.kan_l(Fo_l)  # (B, T, 1)
@@ -106,7 +106,7 @@ class MultiOrderKANBlock(nn.Module):
         h_out = self.kan_h(Fo_h)  # (B, T, 1)
 
         concat = torch.cat([l_out, m_out, h_out], dim=-1)  # (B, T, 3)
-        out = self.fusion(concat)  # (B, T, 1)
+        out = self.fusion(concat)  # (B, T, input_dim)
         return out
 
 class PrototypeAssignment(nn.Module):
@@ -150,6 +150,15 @@ class Model(nn.Module):
             padding_size=None,
             use_ff=True,
             reg_weight=None,
+            num_prototypes=8,
+            fl_ratio=0.1,
+            fh_ratio=0.3,
+            kan_taylor_hidden=64,
+            kan_Q=4,
+            kan_P=3,
+            T_max=1,
+            lambda_step_ratio=0.01,
+            inv_guidance_scale=0.0,
             **kwargs
     ):
         super(Model, self).__init__()
@@ -163,6 +172,18 @@ class Model(nn.Module):
                                  n_heads=n_heads, attn_pdrop=attn_pd, resid_pdrop=resid_pd, mlp_hidden_times=mlp_hidden_times,
                                  max_len=seq_length, n_embd=d_model, conv_params=[kernel_size, padding_size], **kwargs)
 
+        # KPL pipeline: FDM -> MultiOrderKAN -> PrototypeAssignment, all over feature_size channels.
+        self.fdm = FDM(fl_ratio=fl_ratio, fh_ratio=fh_ratio)
+        self.kan_block = MultiOrderKANBlock(
+            input_dim=feature_size, taylor_hidden=kan_taylor_hidden, Q=kan_Q, P=kan_P,
+        )
+        self.kpa = PrototypeAssignment(d_model=feature_size, num_prototypes=num_prototypes)
+
+        # R-Sampling hyperparameters (only used by full p_sample loop, not DDIM fast_sample).
+        self.T_max = int(T_max)
+        self.inv_guidance_scale = float(inv_guidance_scale)
+        self.lambda_step = float(lambda_step_ratio) * float(timesteps)
+
         if beta_schedule == 'linear':
             betas = linear_beta_schedule(timesteps)
         elif beta_schedule == 'cosine':
@@ -173,8 +194,7 @@ class Model(nn.Module):
         alphas = 1. - betas
         alphas_cumprod = torch.cumprod(alphas, dim=0)
         alphas_cumprod_prev = F.pad(alphas_cumprod[:-1], (1, 0), value=1.)
-        fdm = FDM(fl_ratio=0.1, fh_ratio=0.3)  
-        
+
         timesteps, = betas.shape
         self.num_timesteps = int(timesteps)
         self.loss_type = loss_type
@@ -243,13 +263,12 @@ class Model(nn.Module):
         return posterior_mean, posterior_variance, posterior_log_variance_clipped
     
     def output(self, x, x_mark, t, padding_masks=None):
-
-        low_freq, mid_freq, high_freq = fdm(x)
-        kan_block = MultiOrderKANBlock(input_dim=D)
-        H = kan_block(low_freq, mid_freq, high_freq)  # (B, T, D)
-        kpa = PrototypeAssignment(d_model=D, num_prototypes=K)
-        Z_p, A = kpa(H)
-        model_output = self.model(Z_p, t, padding_masks=padding_masks)  # transformer
+        # KPL pipeline: x (B, T, feature_size) -> FDM -> KAN -> KPA -> Z_p (B, T, feature_size)
+        low_freq, mid_freq, high_freq = self.fdm(x)
+        H = self.kan_block(low_freq, mid_freq, high_freq)
+        Z_p, A = self.kpa(H)
+        self._last_proto_attn = A  # cached for optional auxiliary losses
+        model_output = self.model(Z_p, t, padding_masks=padding_masks)
         return model_output
 
     def model_predictions(self, x, t, clip_x_start=False, padding_masks=None, guidance_scale=None):
@@ -339,7 +358,12 @@ class Model(nn.Module):
         img = torch.randn(shape, device=device)
         for t in tqdm(reversed(range(0, self.num_timesteps)),
                       desc='sampling loop time step', total=self.num_timesteps):
-            img, _ = self.p_sample(img, t)
+            img, _ = self.p_sample(
+                img, t,
+                T_max=self.T_max,
+                inv_guidance_scale=self.inv_guidance_scale,
+                lambda_step=self.lambda_step,
+            )
         return img
 
     @torch.no_grad()
@@ -400,34 +424,7 @@ class Model(nn.Module):
     def _train_loss(self, x_start, t, x_mark=None, target=None, noise=None, padding_masks=None):
         noise = default(noise, lambda: torch.randn_like(x_start))  # x_start : ori data
         if target is None:
-            target = x_star
-       
-        B, L, C = x_start.shape
-        N = 3
-        #  Project: x_start -> (B, C, L) -> (B, C, d_model)
-        x_p = x_start.permute(0, 2, 1)  # (B, C, L)
-        project1 = nn.Linear(L, self.d_model).to(x_start.device)
-        x_p = project1(x_p)  # (B, C, d_model)
-        proj = nn.Linear(C * L, int(C / 2) * L).to(x_start.device)
-        x_mark_flat = x_start.view(B, -1)  # (B, C*L)
-        x_mark = proj(x_mark_flat)  # (B, int(C/2)*L)
-        kbn = KBasisNet(input_len=int(C / 2) * L, output_len=N * (L + L)).to(x_start.device)  
-        basis = kbn(x_mark).reshape(B, L + L, N)  # (B, L+L, N)
-        basis = basis / torch.sqrt(torch.sum(basis ** 2, dim=1, keepdim=True) + self.epsilon)
-        # basis projection
-        raw_basis = basis[:, :L].permute(0, 2, 1)  # (B, N, L)
-        project2 =nn.Linear(L, self.d_model).to(x_start.device)
-        basis_proj = project2(raw_basis)  # (B, N, d_model)
-        ca = channel_AutoCorrelationLayer().to(x_start.device)
-        out, _ = ca(basis_proj, basis_proj, basis_proj)  # (B, C, d_model)
-        #  输出映射: d_model -> L
-        output_proj = nn.Linear(self.d_model, L).to(x_start.device)
-        out = output_proj(out)  
-        # 转为 (B, L, C)，
-        out = out.permute(0, 2, 1)  
-        output_proj = nn.Linear(N, C).to(x_start.device)
-        out = output_proj(out)  
-        # print(out.shape)
+            target = x_start
         x = self.q_sample(x_start=x_start, t=t, noise=noise)   # noise sample
         model_out = self.output(x, None, t, padding_masks)
         train_loss = self.loss_fn(model_out, target, reduction='none')
