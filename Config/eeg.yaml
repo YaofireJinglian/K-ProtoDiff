@@ -8,7 +8,7 @@ model:
     d_model: 64  # 4 X 16
     timesteps: 500
     sampling_timesteps: 100
-    loss_type: 'l1'
+    loss_type: 'l2'
     beta_schedule: 'cosine'
     n_heads: 4
     mlp_hidden_times: 4
