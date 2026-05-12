@@ -3,8 +3,8 @@
 # K-ProtoDiff
 ### Key Prototypes-Guided Diffusion for Time Series Generation
 
-[![Paper](https://img.shields.io/badge/Paper-AAAI%202026-b31b1b.svg)](#)
-[![Conference](https://img.shields.io/badge/Venue-AAAI%202026-1f6feb.svg)](#)
+[![Paper](https://img.shields.io/badge/Paper-AAAI%202026-b31b1b.svg)](https://ojs.aaai.org/index.php/AAAI/article/view/39237)
+[![Conference](https://img.shields.io/badge/Venue-AAAI%202026-1f6feb.svg)](https://ojs.aaai.org/index.php)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.12%2B-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
 
