@@ -115,11 +115,13 @@ Our codebase is built upon the excellent [**Diffusion-TS**](https://github.com/Y
 If you find this work useful in your research, please consider citing:
 
 ```bibtex
-@inproceedings{kprotodiff2026,
-  title     = {K-ProtoDiff: Key Prototypes-Guided Diffusion for Time Series Generation},
-  author    = {Author Names},
-  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
-  year      = {2026},
-  url       = {#}
+@inproceedings{duan2026k,
+  title={K-ProtoDiff: Key Prototypes-Guided Diffusion for Time Series Generation},
+  author={Duan, Yuhang and Lin, Lin and Wu, Xiaoshuai},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={25},
+  pages={20959--20967},
+  year={2026}
 }
 ```
