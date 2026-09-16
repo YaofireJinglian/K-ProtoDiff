@@ -1,0 +1,9 @@
+{
+  "dataset": "fmri",
+  "method": "timegan",
+  "generator_seed": 2028,
+  "predictor_seed": 5103,
+  "MAE": 0.13054557144641876,
+  "RMSE": 0.1642829179763794,
+  "epochs": 33
+}

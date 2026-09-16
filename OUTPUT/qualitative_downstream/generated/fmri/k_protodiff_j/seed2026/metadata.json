@@ -1,0 +1,15 @@
+{
+  "dataset": "fmri",
+  "method": "K-ProtoDiff-J",
+  "seed": 2026,
+  "num_samples": 2048,
+  "shape": [
+    2048,
+    24,
+    50
+  ],
+  "scale": "[0, 1]",
+  "checkpoint": "checkpoints/journal/Checkpoints_journal_fmri_seed2026_24/checkpoint-10.pt",
+  "config": "Config/journal_tuned/fmri.yaml",
+  "sampling_seconds": 30.052858467039187
+}

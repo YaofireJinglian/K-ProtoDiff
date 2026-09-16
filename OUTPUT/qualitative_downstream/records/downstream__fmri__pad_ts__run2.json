@@ -1,0 +1,9 @@
+{
+  "dataset": "fmri",
+  "method": "pad_ts",
+  "generator_seed": 2027,
+  "predictor_seed": 5102,
+  "MAE": 0.09786602854728699,
+  "RMSE": 0.12429842352867126,
+  "epochs": 18
+}

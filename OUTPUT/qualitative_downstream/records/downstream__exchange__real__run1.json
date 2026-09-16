@@ -1,0 +1,9 @@
+{
+  "dataset": "exchange",
+  "method": "real",
+  "generator_seed": null,
+  "predictor_seed": 5101,
+  "MAE": 0.00774700753390789,
+  "RMSE": 0.010908938013017178,
+  "epochs": 53
+}

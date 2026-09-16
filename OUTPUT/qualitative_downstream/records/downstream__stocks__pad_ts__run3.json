@@ -1,0 +1,9 @@
+{
+  "dataset": "stocks",
+  "method": "pad_ts",
+  "generator_seed": 2028,
+  "predictor_seed": 5103,
+  "MAE": 0.011095160618424416,
+  "RMSE": 0.03141295164823532,
+  "epochs": 34
+}

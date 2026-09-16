@@ -1,0 +1,9 @@
+{
+  "dataset": "fmri",
+  "method": "k_protodiff_j",
+  "generator_seed": 2028,
+  "predictor_seed": 5103,
+  "MAE": 0.09669844806194305,
+  "RMSE": 0.122787244617939,
+  "epochs": 20
+}

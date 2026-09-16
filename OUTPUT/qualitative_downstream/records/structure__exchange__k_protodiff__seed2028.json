@@ -1,0 +1,9 @@
+{
+  "dataset": "exchange",
+  "method": "k_protodiff",
+  "seed": 2028,
+  "ACF": 0.002290543168783188,
+  "Spectrum_x100": 3.5255428827312754,
+  "Correlation": 0.03175071113360782,
+  "Trend_x100": 0.33362002577632666
+}

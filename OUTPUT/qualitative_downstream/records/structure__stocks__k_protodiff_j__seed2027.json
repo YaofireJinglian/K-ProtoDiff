@@ -1,0 +1,9 @@
+{
+  "dataset": "stocks",
+  "method": "k_protodiff_j",
+  "seed": 2027,
+  "ACF": 0.005084467586129904,
+  "Spectrum_x100": 2.258274037766949,
+  "Correlation": 0.004886657647813752,
+  "Trend_x100": 0.24504195898771286
+}
