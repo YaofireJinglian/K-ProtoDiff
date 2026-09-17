@@ -1,0 +1,9 @@
+{
+  "dataset": "exchange",
+  "method": "pad_ts",
+  "generator_seed": 2027,
+  "predictor_seed": 5102,
+  "MAE": 0.006326721515506506,
+  "RMSE": 0.009044796228408813,
+  "epochs": 60
+}

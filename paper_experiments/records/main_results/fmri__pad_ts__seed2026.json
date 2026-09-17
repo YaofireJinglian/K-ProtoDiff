@@ -1,0 +1,14 @@
+{
+  "dataset": "fMRI",
+  "method": "PaD-TS",
+  "seed": 2026,
+  "metrics": {
+    "C-FID": 0.098633,
+    "KL": 0.000146,
+    "DS": 0.184619,
+    "PS": 0.100324,
+    "Seg-DTW-L6": 3.10373,
+    "Seg-DTW-L8": 3.581473,
+    "Seg-DTW-L10": 3.99999
+  }
+}

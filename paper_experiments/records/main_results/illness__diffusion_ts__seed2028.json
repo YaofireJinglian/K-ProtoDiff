@@ -1,0 +1,86 @@
+{
+  "dataset": "Illness",
+  "method": "Diffusion-TS",
+  "seed": 2028,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.037384,
+    "KL": 0.005283,
+    "DS": 0.097884,
+    "PS": 0.029432,
+    "Seg-DTW-L6": 1.258204,
+    "Seg-DTW-L8": 1.464397,
+    "Seg-DTW-L10": 1.643034
+  },
+  "run_config": {
+    "dataset": "Illness",
+    "method": "diffusion_ts",
+    "seed": 2028,
+    "parameters": {
+      "config": {
+        "model": {
+          "target": "Models.interpretable_diffusion.gaussian_diffusion.Diffusion_TS",
+          "params": {
+            "seq_length": 24,
+            "feature_size": 7,
+            "n_layer_enc": 3,
+            "n_layer_dec": 2,
+            "d_model": 64,
+            "timesteps": 500,
+            "sampling_timesteps": 500,
+            "loss_type": "l2",
+            "beta_schedule": "cosine",
+            "n_heads": 4,
+            "mlp_hidden_times": 4,
+            "attn_pd": 0.0,
+            "resid_pd": 0.0,
+            "kernel_size": 1,
+            "padding_size": 0
+          }
+        },
+        "solver": {
+          "base_lr": 1e-05,
+          "max_epochs": 12000,
+          "results_folder": "./checkpoints/journal/Checkpoints_journal_illness",
+          "gradient_accumulate_every": 2,
+          "save_cycle": 1200,
+          "ema": {
+            "decay": 0.995,
+            "update_interval": 10
+          },
+          "scheduler": {
+            "target": "engine.lr_sch.ReduceLROnPlateauWithWarmup",
+            "params": {
+              "factor": 0.5,
+              "patience": 3000,
+              "min_lr": 1e-05,
+              "threshold": 0.1,
+              "threshold_mode": "rel",
+              "warmup_lr": 0.0008,
+              "warmup": 500,
+              "verbose": false
+            }
+          }
+        },
+        "dataloader": {
+          "batch_size": 128
+        }
+      },
+      "sample_size": 128,
+      "seed": 2028
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_illness_seed2026/samples/illness_norm_truth_24_train.npy",
+    "data_shape": [
+      943,
+      24,
+      7
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T08:51:29.338588+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

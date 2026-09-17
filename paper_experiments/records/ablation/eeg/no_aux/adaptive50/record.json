@@ -1,0 +1,23 @@
+{
+  "dataset": "eeg",
+  "variant": "no_aux",
+  "sampler": "adaptive50",
+  "seed": 2026,
+  "metrics": {
+    "Context-FID": 4.172266,
+    "KL": 3.033232,
+    "DS_mean": 0.45122,
+    "DS_std": 0.0,
+    "PS_mean": 0.149992,
+    "PS_std": 0.0,
+    "Segment-DTW-L6": 2.177471,
+    "Segment-DTW-L8": 2.455352,
+    "Segment-DTW-L10": 2.819353
+  },
+  "split": "validation",
+  "train_steps": 12000,
+  "seconds": 24.54019495600369,
+  "peak_mib": 28.1875,
+  "nfe_per_batch": 38.0,
+  "parameters_m": 0.405899
+}

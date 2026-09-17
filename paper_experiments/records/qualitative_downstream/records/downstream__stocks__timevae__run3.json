@@ -1,0 +1,9 @@
+{
+  "dataset": "stocks",
+  "method": "timevae",
+  "generator_seed": 2028,
+  "predictor_seed": 5103,
+  "MAE": 0.01962803676724434,
+  "RMSE": 0.043099064379930496,
+  "epochs": 31
+}

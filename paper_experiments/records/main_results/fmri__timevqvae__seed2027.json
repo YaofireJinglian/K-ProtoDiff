@@ -1,0 +1,14 @@
+{
+  "dataset": "fMRI",
+  "method": "TimeVQVAE",
+  "seed": 2027,
+  "metrics": {
+    "C-FID": 8.849912,
+    "KL": 0.900238,
+    "DS": 0.499499,
+    "PS": 0.1641,
+    "Seg-DTW-L6": 2.331002,
+    "Seg-DTW-L8": 2.693023,
+    "Seg-DTW-L10": 3.01321
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "dataset": "Energy",
+  "method": "TimeVQVAE",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 1.76161,
+    "KL": 0.035708,
+    "DS": 0.495942,
+    "PS": 0.343865,
+    "Seg-DTW-L6": 3.018016,
+    "Seg-DTW-L8": 3.480472,
+    "Seg-DTW-L10": 3.889699
+  },
+  "run_config": {
+    "dataset": "Energy",
+    "method": "timevqvae",
+    "seed": 2027,
+    "parameters": {
+      "batch_size": 32,
+      "stage1_steps": 20000,
+      "stage2_steps": 40000,
+      "lr": 0.005,
+      "min_lr": 0.0005,
+      "warmup_fraction": 0.05,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_energy_seed2026/samples/energy_norm_truth_24_train.npy",
+    "data_shape": [
+      19712,
+      24,
+      28
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T19:54:37.992105+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

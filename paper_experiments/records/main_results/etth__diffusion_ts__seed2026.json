@@ -1,0 +1,86 @@
+{
+  "dataset": "ETTh",
+  "method": "Diffusion-TS",
+  "seed": 2026,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.01452,
+    "KL": 0.001493,
+    "DS": 0.004167,
+    "PS": 0.123288,
+    "Seg-DTW-L6": 1.237354,
+    "Seg-DTW-L8": 1.429222,
+    "Seg-DTW-L10": 1.594025
+  },
+  "run_config": {
+    "dataset": "ETTh",
+    "method": "diffusion_ts",
+    "seed": 2026,
+    "parameters": {
+      "config": {
+        "model": {
+          "target": "Models.interpretable_diffusion.gaussian_diffusion.Diffusion_TS",
+          "params": {
+            "seq_length": 24,
+            "feature_size": 7,
+            "n_layer_enc": 3,
+            "n_layer_dec": 2,
+            "d_model": 64,
+            "timesteps": 500,
+            "sampling_timesteps": 500,
+            "loss_type": "l2",
+            "beta_schedule": "cosine",
+            "n_heads": 4,
+            "mlp_hidden_times": 4,
+            "attn_pd": 0.0,
+            "resid_pd": 0.0,
+            "kernel_size": 1,
+            "padding_size": 0
+          }
+        },
+        "solver": {
+          "base_lr": 1e-05,
+          "max_epochs": 18000,
+          "results_folder": "./checkpoints/journal/Checkpoints_journal_etth",
+          "gradient_accumulate_every": 2,
+          "save_cycle": 1800,
+          "ema": {
+            "decay": 0.995,
+            "update_interval": 10
+          },
+          "scheduler": {
+            "target": "engine.lr_sch.ReduceLROnPlateauWithWarmup",
+            "params": {
+              "factor": 0.5,
+              "patience": 4000,
+              "min_lr": 1e-05,
+              "threshold": 0.1,
+              "threshold_mode": "rel",
+              "warmup_lr": 0.0008,
+              "warmup": 500,
+              "verbose": false
+            }
+          }
+        },
+        "dataloader": {
+          "batch_size": 128
+        }
+      },
+      "sample_size": 128,
+      "seed": 2026
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_etth_seed2026/samples/etth_norm_truth_24_train.npy",
+    "data_shape": [
+      17397,
+      24,
+      7
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T09:48:52.418385+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

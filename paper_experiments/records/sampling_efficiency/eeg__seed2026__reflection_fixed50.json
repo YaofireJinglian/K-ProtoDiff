@@ -1,0 +1,45 @@
+{
+  "dataset": "eeg",
+  "seed": 2026,
+  "mode": "reflection_fixed50",
+  "measurements": [
+    {
+      "seconds": 0.8573615640052594,
+      "samples_per_second": 37.32380986442693,
+      "peak_allocated_mib": 15.173828125,
+      "peak_reserved_mib": 30.0,
+      "denoiser_calls": 50
+    },
+    {
+      "seconds": 0.8582952780125197,
+      "samples_per_second": 37.2832063973364,
+      "peak_allocated_mib": 15.173828125,
+      "peak_reserved_mib": 30.0,
+      "denoiser_calls": 50
+    },
+    {
+      "seconds": 0.8596071109932382,
+      "samples_per_second": 37.22630907860384,
+      "peak_allocated_mib": 15.173828125,
+      "peak_reserved_mib": 30.0,
+      "denoiser_calls": 50
+    }
+  ],
+  "checkpoint": "checkpoints/journal/Checkpoints_journal_eeg_seed2026_24/checkpoint-10.pt",
+  "batch_size": 32,
+  "shape": [
+    32,
+    24,
+    14
+  ],
+  "parameters": 405899,
+  "parameter_mib": 1.5483818054199219,
+  "torch_version": "2.9.1+cu130",
+  "cuda_version": "13.0",
+  "device": "NVIDIA GeForce RTX 5090",
+  "smoke": false,
+  "shared_gpu": false,
+  "scope": "sampling_only",
+  "timestamp": 1789272946.917705,
+  "adaptive_stride_gain": 0.0
+}

@@ -1,0 +1,45 @@
+{
+  "dataset": "weather",
+  "seed": 2026,
+  "mode": "legacy_full",
+  "measurements": [
+    {
+      "seconds": 14.282734171982156,
+      "samples_per_second": 2.2404673793322476,
+      "peak_allocated_mib": 58.6474609375,
+      "peak_reserved_mib": 76.0,
+      "denoiser_calls": 1020
+    },
+    {
+      "seconds": 14.262897389999125,
+      "samples_per_second": 2.2435834126127694,
+      "peak_allocated_mib": 58.6474609375,
+      "peak_reserved_mib": 76.0,
+      "denoiser_calls": 1020
+    },
+    {
+      "seconds": 14.304767370020272,
+      "samples_per_second": 2.237016455581455,
+      "peak_allocated_mib": 58.6474609375,
+      "peak_reserved_mib": 76.0,
+      "denoiser_calls": 1020
+    }
+  ],
+  "checkpoint": "checkpoints/journal/Checkpoints_journal_weather_seed2026_24/checkpoint-10.pt",
+  "batch_size": 32,
+  "shape": [
+    32,
+    24,
+    21
+  ],
+  "parameters": 1192281,
+  "parameter_mib": 4.548191070556641,
+  "torch_version": "2.9.1+cu130",
+  "cuda_version": "13.0",
+  "device": "NVIDIA GeForce RTX 5090",
+  "smoke": false,
+  "shared_gpu": false,
+  "scope": "sampling_only",
+  "timestamp": 1789273176.376039,
+  "adaptive_stride_gain": 1.0
+}

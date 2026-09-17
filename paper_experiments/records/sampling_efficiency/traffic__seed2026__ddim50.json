@@ -1,0 +1,45 @@
+{
+  "dataset": "traffic",
+  "seed": 2026,
+  "mode": "ddim50",
+  "measurements": [
+    {
+      "seconds": 0.7156304089876357,
+      "samples_per_second": 44.71581922471503,
+      "peak_allocated_mib": 110.57177734375,
+      "peak_reserved_mib": 126.0,
+      "denoiser_calls": 50
+    },
+    {
+      "seconds": 0.7145451290125493,
+      "samples_per_second": 44.783735415314815,
+      "peak_allocated_mib": 110.57177734375,
+      "peak_reserved_mib": 126.0,
+      "denoiser_calls": 50
+    },
+    {
+      "seconds": 0.7148135489842389,
+      "samples_per_second": 44.766918653783904,
+      "peak_allocated_mib": 110.15087890625,
+      "peak_reserved_mib": 126.0,
+      "denoiser_calls": 50
+    }
+  ],
+  "checkpoint": "checkpoints/journal/Checkpoints_journal_traffic_seed2026_24/checkpoint-10.pt",
+  "batch_size": 32,
+  "shape": [
+    32,
+    24,
+    862
+  ],
+  "parameters": 12168915,
+  "parameter_mib": 46.42072677612305,
+  "torch_version": "2.9.1+cu130",
+  "cuda_version": "13.0",
+  "device": "NVIDIA GeForce RTX 5090",
+  "smoke": false,
+  "shared_gpu": false,
+  "scope": "sampling_only",
+  "timestamp": 1789273311.906658,
+  "adaptive_stride_gain": 1.0
+}

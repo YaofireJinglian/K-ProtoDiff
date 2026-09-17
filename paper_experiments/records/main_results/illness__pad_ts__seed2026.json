@@ -1,0 +1,60 @@
+{
+  "dataset": "Illness",
+  "method": "PaD-TS",
+  "seed": 2026,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.126909,
+    "KL": 0.009779,
+    "DS": 0.07672,
+    "PS": 0.031376,
+    "Seg-DTW-L6": 1.384672,
+    "Seg-DTW-L8": 1.609029,
+    "Seg-DTW-L10": 1.808162
+  },
+  "run_config": {
+    "dataset": "Illness",
+    "method": "pad_ts",
+    "seed": 2026,
+    "parameters": {
+      "model": {
+        "hidden_size": 256,
+        "num_heads": 4,
+        "n_encoder": 1,
+        "n_decoder": 3,
+        "feature_last": true,
+        "mlp_ratio": 4.0
+      },
+      "diffusion": {
+        "predict_xstart": true,
+        "diffusion_steps": 500,
+        "noise_schedule": "cosine",
+        "loss": "MSE_MMD",
+        "rescale_timesteps": false
+      },
+      "batch_size": 32,
+      "training": {
+        "lr": 0.0001,
+        "weight_decay": 0.0,
+        "lr_anneal_steps": 70000,
+        "log_interval": 10,
+        "save_interval": 5000,
+        "mmd_alpha": 2e-05
+      },
+      "seed": 2026
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_illness_seed2026/samples/illness_norm_truth_24_train.npy",
+    "data_shape": [
+      943,
+      24,
+      7
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T11:07:05.750237+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

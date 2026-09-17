@@ -1,0 +1,45 @@
+{
+  "dataset": "EEG",
+  "method": "TimeVAE",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.198824,
+    "KL": 0.406229,
+    "DS": 0.334808,
+    "PS": 0.02662,
+    "Seg-DTW-L6": 0.406427,
+    "Seg-DTW-L8": 0.437716,
+    "Seg-DTW-L10": 0.511729
+  },
+  "run_config": {
+    "dataset": "EEG",
+    "method": "timevae",
+    "seed": 2027,
+    "parameters": {
+      "max_epochs": 1000,
+      "latent_dim": 8,
+      "hidden_layer_sizes": [
+        50,
+        100,
+        200
+      ],
+      "reconstruction_wt": 3.0,
+      "batch_size": 16,
+      "use_residual_conn": true,
+      "trend_poly": 0,
+      "custom_seas": null,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_eeg_seed2026/samples/eeg_norm_truth_24_train.npy",
+    "data_shape": [
+      11863,
+      24,
+      14
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T06:45:22.262353+00:00"
+  }
+}

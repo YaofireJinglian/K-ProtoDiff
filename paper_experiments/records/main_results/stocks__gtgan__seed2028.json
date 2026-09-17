@@ -1,0 +1,39 @@
+{
+  "dataset": "Stocks",
+  "method": "GT-GAN",
+  "seed": 2028,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 3.598591,
+    "KL": 0.218466,
+    "DS": 0.357435,
+    "PS": 0.128636,
+    "Seg-DTW-L6": 1.788022,
+    "Seg-DTW-L8": 2.06543,
+    "Seg-DTW-L10": 2.30984
+  },
+  "run_config": {
+    "dataset": "Stocks",
+    "method": "gtgan",
+    "seed": 2028,
+    "parameters": {
+      "first_epoch": 5000,
+      "max_steps": 6000,
+      "batch_size": 128,
+      "seed": 2028
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_stocks_seed2026/samples/stocks_norm_truth_24_train.npy",
+    "data_shape": [
+      3662,
+      24,
+      6
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-12T01:19:18.858340+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

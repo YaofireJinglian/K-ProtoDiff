@@ -1,0 +1,811 @@
+{
+  "structure": {
+    "stocks": {
+      "k_protodiff_j": [
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff_j",
+          "seed": 2026,
+          "ACF": 0.003863684833049774,
+          "Spectrum_x100": 2.933679267510112,
+          "Correlation": 0.006872961654684754,
+          "Trend_x100": 0.22990403231233358
+        },
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff_j",
+          "seed": 2027,
+          "ACF": 0.005084467586129904,
+          "Spectrum_x100": 2.258274037766949,
+          "Correlation": 0.004886657647813752,
+          "Trend_x100": 0.24504195898771286
+        },
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff_j",
+          "seed": 2028,
+          "ACF": 0.005579877644777298,
+          "Spectrum_x100": 2.601355115787049,
+          "Correlation": 0.005959531534180799,
+          "Trend_x100": 0.2672988222911954
+        }
+      ],
+      "pad_ts": [
+        {
+          "dataset": "stocks",
+          "method": "pad_ts",
+          "seed": 2026,
+          "ACF": 0.01264357939362526,
+          "Spectrum_x100": 2.5848045696835333,
+          "Correlation": 0.0400665270478326,
+          "Trend_x100": 0.24824582505971193
+        },
+        {
+          "dataset": "stocks",
+          "method": "pad_ts",
+          "seed": 2027,
+          "ACF": 0.016963444650173187,
+          "Spectrum_x100": 2.6428268242342625,
+          "Correlation": 0.036862372785251875,
+          "Trend_x100": 0.28369114734232426
+        },
+        {
+          "dataset": "stocks",
+          "method": "pad_ts",
+          "seed": 2028,
+          "ACF": 0.016472380608320236,
+          "Spectrum_x100": 2.7789854731176336,
+          "Correlation": 0.04729605965513625,
+          "Trend_x100": 0.2255086088553071
+        }
+      ],
+      "timevae": [
+        {
+          "dataset": "stocks",
+          "method": "timevae",
+          "seed": 2026,
+          "ACF": 0.047747332602739334,
+          "Spectrum_x100": 1.3599009424976534,
+          "Correlation": 0.0742546148620112,
+          "Trend_x100": 0.741460407152772
+        },
+        {
+          "dataset": "stocks",
+          "method": "timevae",
+          "seed": 2027,
+          "ACF": 0.04775671288371086,
+          "Spectrum_x100": 1.8295108865421683,
+          "Correlation": 0.07120181359620417,
+          "Trend_x100": 0.7368453778326511
+        },
+        {
+          "dataset": "stocks",
+          "method": "timevae",
+          "seed": 2028,
+          "ACF": 0.047729045152664185,
+          "Spectrum_x100": 1.6491910080336,
+          "Correlation": 0.07185955147534265,
+          "Trend_x100": 0.7293668109923601
+        }
+      ],
+      "k_protodiff": [
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff",
+          "seed": 2026,
+          "ACF": 0.004393076989799738,
+          "Spectrum_x100": 3.8101842629677676,
+          "Correlation": 0.014903511796459486,
+          "Trend_x100": 0.3279426833614707
+        },
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff",
+          "seed": 2027,
+          "ACF": 0.0041596791706979275,
+          "Spectrum_x100": 4.251034663880211,
+          "Correlation": 0.020674676489722255,
+          "Trend_x100": 0.25785909965634346
+        },
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff",
+          "seed": 2028,
+          "ACF": 0.010740424506366253,
+          "Spectrum_x100": 4.138623743702608,
+          "Correlation": 0.021830982260641955,
+          "Trend_x100": 0.2647161250934005
+        }
+      ]
+    },
+    "exchange": {
+      "k_protodiff_j": [
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff_j",
+          "seed": 2026,
+          "ACF": 0.0019165677949786186,
+          "Spectrum_x100": 1.9605435136308766,
+          "Correlation": 0.014104572016260763,
+          "Trend_x100": 0.31079724431037903
+        },
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff_j",
+          "seed": 2027,
+          "ACF": 0.0017612623050808907,
+          "Spectrum_x100": 2.6831320248471897,
+          "Correlation": 0.010832111544164304,
+          "Trend_x100": 0.30020808335393667
+        },
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff_j",
+          "seed": 2028,
+          "ACF": 0.001608632504940033,
+          "Spectrum_x100": 2.113049940746235,
+          "Correlation": 0.019433766936809965,
+          "Trend_x100": 0.2849290845915675
+        }
+      ],
+      "pad_ts": [
+        {
+          "dataset": "exchange",
+          "method": "pad_ts",
+          "seed": 2026,
+          "ACF": 0.00287780724465847,
+          "Spectrum_x100": 2.85239429314983,
+          "Correlation": 0.052131277636470075,
+          "Trend_x100": 0.3586678998544812
+        },
+        {
+          "dataset": "exchange",
+          "method": "pad_ts",
+          "seed": 2027,
+          "ACF": 0.002825857140123844,
+          "Spectrum_x100": 2.8220245970752,
+          "Correlation": 0.04847863017950715,
+          "Trend_x100": 0.3515045391395688
+        },
+        {
+          "dataset": "exchange",
+          "method": "pad_ts",
+          "seed": 2028,
+          "ACF": 0.002914280630648136,
+          "Spectrum_x100": 2.6333890354891443,
+          "Correlation": 0.040194695262019735,
+          "Trend_x100": 0.35983521956950426
+        }
+      ],
+      "timevae": [
+        {
+          "dataset": "exchange",
+          "method": "timevae",
+          "seed": 2026,
+          "ACF": 0.003448198549449444,
+          "Spectrum_x100": 1.2363934420243992,
+          "Correlation": 0.03334272147913118,
+          "Trend_x100": 0.4531947895884514
+        },
+        {
+          "dataset": "exchange",
+          "method": "timevae",
+          "seed": 2027,
+          "ACF": 0.003428981639444828,
+          "Spectrum_x100": 1.3320034951820372,
+          "Correlation": 0.024552001452034126,
+          "Trend_x100": 0.4490797873586416
+        },
+        {
+          "dataset": "exchange",
+          "method": "timevae",
+          "seed": 2028,
+          "ACF": 0.0034050913527607918,
+          "Spectrum_x100": 1.4369478846890598,
+          "Correlation": 0.0245495612610782,
+          "Trend_x100": 0.470861978828907
+        }
+      ],
+      "k_protodiff": [
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff",
+          "seed": 2026,
+          "ACF": 0.0021117040887475014,
+          "Spectrum_x100": 3.3718685535412787,
+          "Correlation": 0.02191279412887404,
+          "Trend_x100": 0.3162528621032834
+        },
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff",
+          "seed": 2027,
+          "ACF": 0.002261687070131302,
+          "Spectrum_x100": 3.4981270693440827,
+          "Correlation": 0.029633305613713974,
+          "Trend_x100": 0.3402280621230602
+        },
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff",
+          "seed": 2028,
+          "ACF": 0.002290543168783188,
+          "Spectrum_x100": 3.5255428827312754,
+          "Correlation": 0.03175071113360782,
+          "Trend_x100": 0.33362002577632666
+        }
+      ]
+    },
+    "fmri": {
+      "k_protodiff_j": [
+        {
+          "dataset": "fmri",
+          "method": "k_protodiff_j",
+          "seed": 2026,
+          "ACF": 0.01576915942132473,
+          "Spectrum_x100": 0.49835543343117045,
+          "Correlation": 0.008722795233391705,
+          "Trend_x100": 0.5932937376201153
+        },
+        {
+          "dataset": "fmri",
+          "method": "k_protodiff_j",
+          "seed": 2027,
+          "ACF": 0.014862778596580029,
+          "Spectrum_x100": 0.4709514494261052,
+          "Correlation": 0.008640590242098596,
+          "Trend_x100": 0.6042919587343931
+        },
+        {
+          "dataset": "fmri",
+          "method": "k_protodiff_j",
+          "seed": 2028,
+          "ACF": 0.015772901475429535,
+          "Spectrum_x100": 0.488014135262865,
+          "Correlation": 0.008664050171822927,
+          "Trend_x100": 0.6191198714077473
+        }
+      ],
+      "pad_ts": [
+        {
+          "dataset": "fmri",
+          "method": "pad_ts",
+          "seed": 2026,
+          "ACF": 0.014776294119656086,
+          "Spectrum_x100": 0.45143551551643546,
+          "Correlation": 0.009724206262434957,
+          "Trend_x100": 0.15231927391141653
+        },
+        {
+          "dataset": "fmri",
+          "method": "pad_ts",
+          "seed": 2027,
+          "ACF": 0.015492090955376625,
+          "Spectrum_x100": 0.48093678236028276,
+          "Correlation": 0.00906416604731327,
+          "Trend_x100": 0.1987746451050043
+        },
+        {
+          "dataset": "fmri",
+          "method": "pad_ts",
+          "seed": 2028,
+          "ACF": 0.01563269831240177,
+          "Spectrum_x100": 0.4832483944833081,
+          "Correlation": 0.008708038912475192,
+          "Trend_x100": 0.18629743717610836
+        }
+      ],
+      "timevae": [
+        {
+          "dataset": "fmri",
+          "method": "timevae",
+          "seed": 2026,
+          "ACF": 0.20493869483470917,
+          "Spectrum_x100": 5.846690328624364,
+          "Correlation": 0.18862063947002056,
+          "Trend_x100": 8.553368598222733
+        },
+        {
+          "dataset": "fmri",
+          "method": "timevae",
+          "seed": 2027,
+          "ACF": 0.1825035810470581,
+          "Spectrum_x100": 5.604711528604111,
+          "Correlation": 0.19737037591410556,
+          "Trend_x100": 8.635535091161728
+        },
+        {
+          "dataset": "fmri",
+          "method": "timevae",
+          "seed": 2028,
+          "ACF": 0.2969132959842682,
+          "Spectrum_x100": 5.366479136559719,
+          "Correlation": 0.17907989957091403,
+          "Trend_x100": 8.6481973528862
+        }
+      ],
+      "timegan": [
+        {
+          "dataset": "fmri",
+          "method": "timegan",
+          "seed": 2026,
+          "ACF": 0.08025553077459335,
+          "Spectrum_x100": 2.224234643844497,
+          "Correlation": 0.19272902443224796,
+          "Trend_x100": 0.9162440896034241
+        },
+        {
+          "dataset": "fmri",
+          "method": "timegan",
+          "seed": 2027,
+          "ACF": 0.11020845174789429,
+          "Spectrum_x100": 3.080610202007714,
+          "Correlation": 0.2805984323739435,
+          "Trend_x100": 1.2058303691446781
+        },
+        {
+          "dataset": "fmri",
+          "method": "timegan",
+          "seed": 2028,
+          "ACF": 0.08464568108320236,
+          "Spectrum_x100": 2.187346197336413,
+          "Correlation": 0.22457019763691974,
+          "Trend_x100": 0.7060359232127666
+        }
+      ]
+    }
+  },
+  "downstream": {
+    "stocks": {
+      "real": [
+        {
+          "dataset": "stocks",
+          "method": "real",
+          "generator_seed": null,
+          "predictor_seed": 5101,
+          "MAE": 0.01013015303760767,
+          "RMSE": 0.030300602316856384,
+          "epochs": 40
+        },
+        {
+          "dataset": "stocks",
+          "method": "real",
+          "generator_seed": null,
+          "predictor_seed": 5102,
+          "MAE": 0.010937548242509365,
+          "RMSE": 0.030619941651821136,
+          "epochs": 37
+        },
+        {
+          "dataset": "stocks",
+          "method": "real",
+          "generator_seed": null,
+          "predictor_seed": 5103,
+          "MAE": 0.011682494543492794,
+          "RMSE": 0.03073895536363125,
+          "epochs": 20
+        }
+      ],
+      "k_protodiff_j": [
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff_j",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.011896817944943905,
+          "RMSE": 0.031380318105220795,
+          "epochs": 25
+        },
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff_j",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.012009864673018456,
+          "RMSE": 0.03183835372328758,
+          "epochs": 60
+        },
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff_j",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.011486642993986607,
+          "RMSE": 0.03017231822013855,
+          "epochs": 28
+        }
+      ],
+      "pad_ts": [
+        {
+          "dataset": "stocks",
+          "method": "pad_ts",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.01050005666911602,
+          "RMSE": 0.03111269511282444,
+          "epochs": 60
+        },
+        {
+          "dataset": "stocks",
+          "method": "pad_ts",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.011840752325952053,
+          "RMSE": 0.031094374135136604,
+          "epochs": 38
+        },
+        {
+          "dataset": "stocks",
+          "method": "pad_ts",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.011095160618424416,
+          "RMSE": 0.03141295164823532,
+          "epochs": 34
+        }
+      ],
+      "timevae": [
+        {
+          "dataset": "stocks",
+          "method": "timevae",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.019904784858226776,
+          "RMSE": 0.04234654828906059,
+          "epochs": 32
+        },
+        {
+          "dataset": "stocks",
+          "method": "timevae",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.016839833930134773,
+          "RMSE": 0.037166811525821686,
+          "epochs": 53
+        },
+        {
+          "dataset": "stocks",
+          "method": "timevae",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.01962803676724434,
+          "RMSE": 0.043099064379930496,
+          "epochs": 31
+        }
+      ],
+      "k_protodiff": [
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.014302631840109825,
+          "RMSE": 0.034854546189308167,
+          "epochs": 60
+        },
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.013241053558886051,
+          "RMSE": 0.033419325947761536,
+          "epochs": 60
+        },
+        {
+          "dataset": "stocks",
+          "method": "k_protodiff",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.013303705491125584,
+          "RMSE": 0.031404342502355576,
+          "epochs": 60
+        }
+      ]
+    },
+    "exchange": {
+      "real": [
+        {
+          "dataset": "exchange",
+          "method": "real",
+          "generator_seed": null,
+          "predictor_seed": 5101,
+          "MAE": 0.00774700753390789,
+          "RMSE": 0.010908938013017178,
+          "epochs": 53
+        },
+        {
+          "dataset": "exchange",
+          "method": "real",
+          "generator_seed": null,
+          "predictor_seed": 5102,
+          "MAE": 0.0070780739188194275,
+          "RMSE": 0.010033379308879375,
+          "epochs": 44
+        },
+        {
+          "dataset": "exchange",
+          "method": "real",
+          "generator_seed": null,
+          "predictor_seed": 5103,
+          "MAE": 0.006991828791797161,
+          "RMSE": 0.00973788183182478,
+          "epochs": 60
+        }
+      ],
+      "k_protodiff_j": [
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff_j",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.006755942478775978,
+          "RMSE": 0.009626609273254871,
+          "epochs": 60
+        },
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff_j",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.006272557191550732,
+          "RMSE": 0.009070059284567833,
+          "epochs": 60
+        },
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff_j",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.006391135510057211,
+          "RMSE": 0.00924847461283207,
+          "epochs": 60
+        }
+      ],
+      "pad_ts": [
+        {
+          "dataset": "exchange",
+          "method": "pad_ts",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.006553329061716795,
+          "RMSE": 0.009344162419438362,
+          "epochs": 60
+        },
+        {
+          "dataset": "exchange",
+          "method": "pad_ts",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.006326721515506506,
+          "RMSE": 0.009044796228408813,
+          "epochs": 60
+        },
+        {
+          "dataset": "exchange",
+          "method": "pad_ts",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.006388509180396795,
+          "RMSE": 0.009136551059782505,
+          "epochs": 60
+        }
+      ],
+      "timevae": [
+        {
+          "dataset": "exchange",
+          "method": "timevae",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.008342266082763672,
+          "RMSE": 0.011599833145737648,
+          "epochs": 57
+        },
+        {
+          "dataset": "exchange",
+          "method": "timevae",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.007317683193832636,
+          "RMSE": 0.010425074025988579,
+          "epochs": 60
+        },
+        {
+          "dataset": "exchange",
+          "method": "timevae",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.1796804964542389,
+          "RMSE": 0.2127922624349594,
+          "epochs": 60
+        }
+      ],
+      "k_protodiff": [
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.008792434819042683,
+          "RMSE": 0.012086273171007633,
+          "epochs": 60
+        },
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.008077305741608143,
+          "RMSE": 0.011263040825724602,
+          "epochs": 60
+        },
+        {
+          "dataset": "exchange",
+          "method": "k_protodiff",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.009048186242580414,
+          "RMSE": 0.01239847857505083,
+          "epochs": 60
+        }
+      ]
+    },
+    "fmri": {
+      "real": [
+        {
+          "dataset": "fmri",
+          "method": "real",
+          "generator_seed": null,
+          "predictor_seed": 5101,
+          "MAE": 0.09709304571151733,
+          "RMSE": 0.12342827022075653,
+          "epochs": 18
+        },
+        {
+          "dataset": "fmri",
+          "method": "real",
+          "generator_seed": null,
+          "predictor_seed": 5102,
+          "MAE": 0.09712200611829758,
+          "RMSE": 0.12329091131687164,
+          "epochs": 18
+        },
+        {
+          "dataset": "fmri",
+          "method": "real",
+          "generator_seed": null,
+          "predictor_seed": 5103,
+          "MAE": 0.09708651900291443,
+          "RMSE": 0.12328419089317322,
+          "epochs": 20
+        }
+      ],
+      "k_protodiff_j": [
+        {
+          "dataset": "fmri",
+          "method": "k_protodiff_j",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.09674952924251556,
+          "RMSE": 0.1228591576218605,
+          "epochs": 21
+        },
+        {
+          "dataset": "fmri",
+          "method": "k_protodiff_j",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.09659063071012497,
+          "RMSE": 0.12265363335609436,
+          "epochs": 23
+        },
+        {
+          "dataset": "fmri",
+          "method": "k_protodiff_j",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.09669844806194305,
+          "RMSE": 0.122787244617939,
+          "epochs": 20
+        }
+      ],
+      "pad_ts": [
+        {
+          "dataset": "fmri",
+          "method": "pad_ts",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.09791745245456696,
+          "RMSE": 0.12448914349079132,
+          "epochs": 17
+        },
+        {
+          "dataset": "fmri",
+          "method": "pad_ts",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.09786602854728699,
+          "RMSE": 0.12429842352867126,
+          "epochs": 18
+        },
+        {
+          "dataset": "fmri",
+          "method": "pad_ts",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.09741542488336563,
+          "RMSE": 0.12367188185453415,
+          "epochs": 18
+        }
+      ],
+      "timevae": [
+        {
+          "dataset": "fmri",
+          "method": "timevae",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.10053062438964844,
+          "RMSE": 0.127446249127388,
+          "epochs": 17
+        },
+        {
+          "dataset": "fmri",
+          "method": "timevae",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.10052929818630219,
+          "RMSE": 0.12744970619678497,
+          "epochs": 14
+        },
+        {
+          "dataset": "fmri",
+          "method": "timevae",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.10052939504384995,
+          "RMSE": 0.127445787191391,
+          "epochs": 14
+        }
+      ],
+      "timegan": [
+        {
+          "dataset": "fmri",
+          "method": "timegan",
+          "generator_seed": 2026,
+          "predictor_seed": 5101,
+          "MAE": 0.12587198615074158,
+          "RMSE": 0.15906989574432373,
+          "epochs": 32
+        },
+        {
+          "dataset": "fmri",
+          "method": "timegan",
+          "generator_seed": 2027,
+          "predictor_seed": 5102,
+          "MAE": 0.12860643863677979,
+          "RMSE": 0.16212208569049835,
+          "epochs": 40
+        },
+        {
+          "dataset": "fmri",
+          "method": "timegan",
+          "generator_seed": 2028,
+          "predictor_seed": 5103,
+          "MAE": 0.13054557144641876,
+          "RMSE": 0.1642829179763794,
+          "epochs": 33
+        }
+      ]
+    }
+  },
+  "figures": {
+    "stocks": "OUTPUT/qualitative_downstream/figures/stocks_qualitative_structure.png",
+    "exchange": "OUTPUT/qualitative_downstream/figures/exchange_qualitative_structure.png",
+    "fmri": "OUTPUT/qualitative_downstream/figures/fmri_qualitative_structure.png"
+  },
+  "displayed_channels": {
+    "stocks": 2,
+    "exchange": 6,
+    "fmri": 17
+  }
+}

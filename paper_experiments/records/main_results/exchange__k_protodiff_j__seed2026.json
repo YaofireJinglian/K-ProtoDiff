@@ -1,0 +1,23 @@
+{
+  "dataset": "Exchange",
+  "method": "K-ProtoDiff-J",
+  "seed": 2026,
+  "provenance": "formal_tuned_confirmation",
+  "selection_split": "validation",
+  "selection_seeds": [
+    2031,
+    2032,
+    2033
+  ],
+  "frozen_validation_choice": "control/gentle200",
+  "config_sha256": "2084b1d0a58d25d21225213f323200124c9aa419416690a59942118fcb262e64",
+  "metrics": {
+    "C-FID": 0.006346,
+    "KL": 0.002037,
+    "DS": 0.00727,
+    "PS": 0.036175,
+    "Seg-DTW-L6": 1.982974,
+    "Seg-DTW-L8": 2.289685,
+    "Seg-DTW-L10": 2.560928
+  }
+}

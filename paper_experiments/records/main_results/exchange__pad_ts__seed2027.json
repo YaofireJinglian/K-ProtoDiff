@@ -1,0 +1,60 @@
+{
+  "dataset": "Exchange",
+  "method": "PaD-TS",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.160637,
+    "KL": 0.051836,
+    "DS": 0.145406,
+    "PS": 0.039345,
+    "Seg-DTW-L6": 2.141746,
+    "Seg-DTW-L8": 2.472602,
+    "Seg-DTW-L10": 2.765166
+  },
+  "run_config": {
+    "dataset": "Exchange",
+    "method": "pad_ts",
+    "seed": 2027,
+    "parameters": {
+      "model": {
+        "hidden_size": 256,
+        "num_heads": 4,
+        "n_encoder": 1,
+        "n_decoder": 3,
+        "feature_last": true,
+        "mlp_ratio": 4.0
+      },
+      "diffusion": {
+        "predict_xstart": true,
+        "diffusion_steps": 500,
+        "noise_schedule": "cosine",
+        "loss": "MSE_MMD",
+        "rescale_timesteps": false
+      },
+      "batch_size": 32,
+      "training": {
+        "lr": 0.0001,
+        "weight_decay": 0.0,
+        "lr_anneal_steps": 70000,
+        "log_interval": 10,
+        "save_interval": 5000,
+        "mmd_alpha": 2e-05
+      },
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_exchange_seed2026/samples/exchange_norm_truth_24_train.npy",
+    "data_shape": [
+      7565,
+      24,
+      8
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T15:33:46.285745+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

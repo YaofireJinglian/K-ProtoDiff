@@ -1,0 +1,45 @@
+{
+  "dataset": "Energy",
+  "method": "TimeVAE",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 1.732874,
+    "KL": 0.02217,
+    "DS": 0.499873,
+    "PS": 0.316846,
+    "Seg-DTW-L6": 3.004696,
+    "Seg-DTW-L8": 3.470387,
+    "Seg-DTW-L10": 3.881161
+  },
+  "run_config": {
+    "dataset": "Energy",
+    "method": "timevae",
+    "seed": 2027,
+    "parameters": {
+      "max_epochs": 1000,
+      "latent_dim": 8,
+      "hidden_layer_sizes": [
+        50,
+        100,
+        200
+      ],
+      "reconstruction_wt": 3.0,
+      "batch_size": 16,
+      "use_residual_conn": true,
+      "trend_poly": 0,
+      "custom_seas": null,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_energy_seed2026/samples/energy_norm_truth_24_train.npy",
+    "data_shape": [
+      19712,
+      24,
+      28
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T07:04:05.407791+00:00"
+  }
+}

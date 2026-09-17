@@ -1,0 +1,42 @@
+{
+  "dataset": "EEG",
+  "method": "TimeVQVAE",
+  "seed": 2026,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.010769,
+    "KL": 0.006971,
+    "DS": 0.487568,
+    "PS": 0.026509,
+    "Seg-DTW-L6": 0.510931,
+    "Seg-DTW-L8": 0.546059,
+    "Seg-DTW-L10": 0.631136
+  },
+  "run_config": {
+    "dataset": "EEG",
+    "method": "timevqvae",
+    "seed": 2026,
+    "parameters": {
+      "batch_size": 32,
+      "stage1_steps": 20000,
+      "stage2_steps": 40000,
+      "lr": 0.005,
+      "min_lr": 0.0005,
+      "warmup_fraction": 0.05,
+      "seed": 2026
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_eeg_seed2026/samples/eeg_norm_truth_24_train.npy",
+    "data_shape": [
+      11863,
+      24,
+      14
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T18:05:02.638577+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

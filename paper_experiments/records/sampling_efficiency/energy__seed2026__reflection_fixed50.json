@@ -1,0 +1,45 @@
+{
+  "dataset": "energy",
+  "seed": 2026,
+  "mode": "reflection_fixed50",
+  "measurements": [
+    {
+      "seconds": 0.9883397319936194,
+      "samples_per_second": 32.377530685173944,
+      "peak_allocated_mib": 20.671875,
+      "peak_reserved_mib": 32.0,
+      "denoiser_calls": 50
+    },
+    {
+      "seconds": 0.9879327029921114,
+      "samples_per_second": 32.3908702516709,
+      "peak_allocated_mib": 20.671875,
+      "peak_reserved_mib": 32.0,
+      "denoiser_calls": 50
+    },
+    {
+      "seconds": 0.9884053989953827,
+      "samples_per_second": 32.375379608938665,
+      "peak_allocated_mib": 20.671875,
+      "peak_reserved_mib": 32.0,
+      "denoiser_calls": 50
+    }
+  ],
+  "checkpoint": "checkpoints/journal/Checkpoints_journal_energy_seed2026_24/checkpoint-10.pt",
+  "batch_size": 32,
+  "shape": [
+    32,
+    24,
+    28
+  ],
+  "parameters": 1225615,
+  "parameter_mib": 4.675350189208984,
+  "torch_version": "2.9.1+cu130",
+  "cuda_version": "13.0",
+  "device": "NVIDIA GeForce RTX 5090",
+  "smoke": false,
+  "shared_gpu": false,
+  "scope": "sampling_only",
+  "timestamp": 1789272979.689517,
+  "adaptive_stride_gain": 0.0
+}

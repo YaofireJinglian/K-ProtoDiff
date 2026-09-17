@@ -1,0 +1,45 @@
+{
+  "dataset": "Stocks",
+  "method": "TimeVAE",
+  "seed": 2026,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.234336,
+    "KL": 0.021712,
+    "DS": 0.156889,
+    "PS": 0.040453,
+    "Seg-DTW-L6": 1.481285,
+    "Seg-DTW-L8": 1.712232,
+    "Seg-DTW-L10": 1.913902
+  },
+  "run_config": {
+    "dataset": "Stocks",
+    "method": "timevae",
+    "seed": 2026,
+    "parameters": {
+      "max_epochs": 1000,
+      "latent_dim": 8,
+      "hidden_layer_sizes": [
+        50,
+        100,
+        200
+      ],
+      "reconstruction_wt": 3.0,
+      "batch_size": 16,
+      "use_residual_conn": true,
+      "trend_poly": 0,
+      "custom_seas": null,
+      "seed": 2026
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_stocks_seed2026/samples/stocks_norm_truth_24_train.npy",
+    "data_shape": [
+      3662,
+      24,
+      6
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-09T13:45:30.993640+00:00"
+  }
+}

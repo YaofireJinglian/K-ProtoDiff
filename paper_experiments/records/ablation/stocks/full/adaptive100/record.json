@@ -1,0 +1,23 @@
+{
+  "dataset": "stocks",
+  "variant": "full",
+  "sampler": "adaptive100",
+  "seed": 2026,
+  "metrics": {
+    "Context-FID": 14.990847,
+    "KL": 11.646869,
+    "DS_mean": 0.438679,
+    "DS_std": 0.0,
+    "PS_mean": 0.012934,
+    "PS_std": 0.0,
+    "Segment-DTW-L6": 3.822954,
+    "Segment-DTW-L8": 4.419318,
+    "Segment-DTW-L10": 4.935672
+  },
+  "split": "validation",
+  "train_steps": 12000,
+  "seconds": 15.893453484022757,
+  "peak_mib": 27.5322265625,
+  "nfe_per_batch": 55.1764705882353,
+  "parameters_m": 0.376587
+}

@@ -1,0 +1,39 @@
+{
+  "dataset": "Exchange",
+  "method": "GT-GAN",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.718126,
+    "KL": 0.013386,
+    "DS": 0.17581,
+    "PS": 0.048734,
+    "Seg-DTW-L6": 2.028961,
+    "Seg-DTW-L8": 2.344021,
+    "Seg-DTW-L10": 2.620743
+  },
+  "run_config": {
+    "dataset": "Exchange",
+    "method": "gtgan",
+    "seed": 2027,
+    "parameters": {
+      "first_epoch": 5000,
+      "max_steps": 6000,
+      "batch_size": 128,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_exchange_seed2026/samples/exchange_norm_truth_24_train.npy",
+    "data_shape": [
+      7565,
+      24,
+      8
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-12T18:53:42.890406+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

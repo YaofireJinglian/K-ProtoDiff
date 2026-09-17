@@ -1,0 +1,23 @@
+{
+  "dataset": "Stocks",
+  "method": "K-ProtoDiff-J",
+  "seed": 2026,
+  "provenance": "formal_tuned_confirmation",
+  "selection_split": "validation",
+  "selection_seeds": [
+    2031,
+    2032,
+    2033
+  ],
+  "frozen_validation_choice": "lr_prototype/gentle200",
+  "config_sha256": "6922b61482f3963f132e552a35aef11d1c988501b8ef72af14c4cfa9f79d6f74",
+  "metrics": {
+    "C-FID": 0.011583,
+    "KL": 0.020411,
+    "DS": 0.012278,
+    "PS": 0.036975,
+    "Seg-DTW-L6": 1.486531,
+    "Seg-DTW-L8": 1.71748,
+    "Seg-DTW-L10": 1.919962
+  }
+}

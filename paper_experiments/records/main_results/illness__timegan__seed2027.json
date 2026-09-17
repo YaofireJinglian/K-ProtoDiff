@@ -1,0 +1,41 @@
+{
+  "dataset": "Illness",
+  "method": "TimeGAN",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.559006,
+    "KL": 0.163536,
+    "DS": 0.351852,
+    "PS": 0.038339,
+    "Seg-DTW-L6": 1.330098,
+    "Seg-DTW-L8": 1.544446,
+    "Seg-DTW-L10": 1.732609
+  },
+  "run_config": {
+    "dataset": "Illness",
+    "method": "timegan",
+    "seed": 2027,
+    "parameters": {
+      "module": "gru",
+      "hidden_dim": 24,
+      "num_layer": 3,
+      "iterations": 50000,
+      "batch_size": 256,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_illness_seed2026/samples/illness_norm_truth_24_train.npy",
+    "data_shape": [
+      943,
+      24,
+      7
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-12T02:24:04.266278+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": true,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "dataset": "stocks",
+  "variant": "point24",
+  "sampler": "legacy_full",
+  "seed": 2026,
+  "metrics": {
+    "Context-FID": 14.528863,
+    "KL": 11.85419,
+    "DS_mean": 0.476415,
+    "DS_std": 0.0,
+    "PS_mean": 0.013916,
+    "PS_std": 0.0,
+    "Segment-DTW-L6": 3.743249,
+    "Segment-DTW-L8": 4.324172,
+    "Segment-DTW-L10": 4.83165
+  },
+  "split": "validation",
+  "train_steps": 12000,
+  "seconds": 84.30443400901277,
+  "peak_mib": 27.6318359375,
+  "nfe_per_batch": 510.0,
+  "parameters_m": 0.375138
+}

@@ -1,0 +1,5 @@
+# Isolated CUDA 13.0 environment; preserve the established non-torch dependencies.
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.9.1+cu130
+torchvision==0.24.1+cu130
+-r requirements-venv.txt

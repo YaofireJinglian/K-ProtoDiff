@@ -1,0 +1,45 @@
+{
+  "dataset": "illness",
+  "seed": 2026,
+  "mode": "ddim50",
+  "measurements": [
+    {
+      "seconds": 0.5693881799816154,
+      "samples_per_second": 56.2006749086945,
+      "peak_allocated_mib": 14.89990234375,
+      "peak_reserved_mib": 28.0,
+      "denoiser_calls": 50
+    },
+    {
+      "seconds": 0.5699496739835013,
+      "samples_per_second": 56.14530801701331,
+      "peak_allocated_mib": 14.89990234375,
+      "peak_reserved_mib": 28.0,
+      "denoiser_calls": 50
+    },
+    {
+      "seconds": 0.5696856919967104,
+      "samples_per_second": 56.17132473143592,
+      "peak_allocated_mib": 14.89990234375,
+      "peak_reserved_mib": 28.0,
+      "denoiser_calls": 50
+    }
+  ],
+  "checkpoint": "checkpoints/journal/Checkpoints_journal_illness_seed2026_24/checkpoint-10.pt",
+  "batch_size": 32,
+  "shape": [
+    32,
+    24,
+    7
+  ],
+  "parameters": 380195,
+  "parameter_mib": 1.4503288269042969,
+  "torch_version": "2.9.1+cu130",
+  "cuda_version": "13.0",
+  "device": "NVIDIA GeForce RTX 5090",
+  "smoke": false,
+  "shared_gpu": false,
+  "scope": "sampling_only",
+  "timestamp": 1789273211.1131787,
+  "adaptive_stride_gain": 1.0
+}

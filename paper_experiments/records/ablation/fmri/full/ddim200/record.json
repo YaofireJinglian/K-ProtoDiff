@@ -1,0 +1,23 @@
+{
+  "dataset": "fmri",
+  "variant": "full",
+  "sampler": "ddim200",
+  "seed": 2026,
+  "metrics": {
+    "Context-FID": 1.128539,
+    "KL": 0.008663,
+    "DS_mean": 0.368293,
+    "DS_std": 0.0,
+    "PS_mean": 0.110769,
+    "PS_std": 0.0,
+    "Segment-DTW-L6": 3.09474,
+    "Segment-DTW-L8": 3.572815,
+    "Segment-DTW-L10": 3.987813
+  },
+  "split": "validation",
+  "train_steps": 15000,
+  "seconds": 135.20319427497452,
+  "peak_mib": 49.455078125,
+  "nfe_per_batch": 200.0,
+  "parameters_m": 1.561547
+}

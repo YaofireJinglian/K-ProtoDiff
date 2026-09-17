@@ -1,0 +1,9 @@
+{
+  "dataset": "stocks",
+  "method": "real",
+  "generator_seed": null,
+  "predictor_seed": 5102,
+  "MAE": 0.010937548242509365,
+  "RMSE": 0.030619941651821136,
+  "epochs": 37
+}

@@ -1,0 +1,45 @@
+{
+  "dataset": "ETTh",
+  "method": "TimeVAE",
+  "seed": 2028,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.855847,
+    "KL": 0.065104,
+    "DS": 0.275287,
+    "PS": 0.127683,
+    "Seg-DTW-L6": 1.115009,
+    "Seg-DTW-L8": 1.289675,
+    "Seg-DTW-L10": 1.441963
+  },
+  "run_config": {
+    "dataset": "ETTh",
+    "method": "timevae",
+    "seed": 2028,
+    "parameters": {
+      "max_epochs": 1000,
+      "latent_dim": 8,
+      "hidden_layer_sizes": [
+        50,
+        100,
+        200
+      ],
+      "reconstruction_wt": 3.0,
+      "batch_size": 16,
+      "use_residual_conn": true,
+      "trend_poly": 0,
+      "custom_seas": null,
+      "seed": 2028
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_etth_seed2026/samples/etth_norm_truth_24_train.npy",
+    "data_shape": [
+      17397,
+      24,
+      7
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T06:45:22.239199+00:00"
+  }
+}

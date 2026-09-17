@@ -1,0 +1,39 @@
+{
+  "dataset": "EEG",
+  "method": "GT-GAN",
+  "seed": 2028,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.583418,
+    "KL": 0.243347,
+    "DS": 0.473451,
+    "PS": 0.03503,
+    "Seg-DTW-L6": 0.63041,
+    "Seg-DTW-L8": 0.705236,
+    "Seg-DTW-L10": 0.805876
+  },
+  "run_config": {
+    "dataset": "EEG",
+    "method": "gtgan",
+    "seed": 2028,
+    "parameters": {
+      "first_epoch": 5000,
+      "max_steps": 6000,
+      "batch_size": 128,
+      "seed": 2028
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_eeg_seed2026/samples/eeg_norm_truth_24_train.npy",
+    "data_shape": [
+      11863,
+      24,
+      14
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-14T23:55:46.038196+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

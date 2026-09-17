@@ -1,0 +1,42 @@
+{
+  "dataset": "Exchange",
+  "method": "TimeVQVAE",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.215198,
+    "KL": 0.022303,
+    "DS": 0.287178,
+    "PS": 0.059242,
+    "Seg-DTW-L6": 1.928497,
+    "Seg-DTW-L8": 2.226253,
+    "Seg-DTW-L10": 2.490499
+  },
+  "run_config": {
+    "dataset": "Exchange",
+    "method": "timevqvae",
+    "seed": 2027,
+    "parameters": {
+      "batch_size": 32,
+      "stage1_steps": 20000,
+      "stage2_steps": 40000,
+      "lr": 0.005,
+      "min_lr": 0.0005,
+      "warmup_fraction": 0.05,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_exchange_seed2026/samples/exchange_norm_truth_24_train.npy",
+    "data_shape": [
+      7565,
+      24,
+      8
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T15:37:38.488533+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

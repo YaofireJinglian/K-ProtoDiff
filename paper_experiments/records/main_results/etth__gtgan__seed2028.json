@@ -1,0 +1,39 @@
+{
+  "dataset": "ETTh",
+  "method": "GT-GAN",
+  "seed": 2028,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 5.949461,
+    "KL": 0.037183,
+    "DS": 0.42069,
+    "PS": 0.210628,
+    "Seg-DTW-L6": 1.5496,
+    "Seg-DTW-L8": 1.79366,
+    "Seg-DTW-L10": 2.008018
+  },
+  "run_config": {
+    "dataset": "ETTh",
+    "method": "gtgan",
+    "seed": 2028,
+    "parameters": {
+      "first_epoch": 5000,
+      "max_steps": 6000,
+      "batch_size": 128,
+      "seed": 2028
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_etth_seed2026/samples/etth_norm_truth_24_train.npy",
+    "data_shape": [
+      17397,
+      24,
+      7
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-13T14:38:06.903858+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

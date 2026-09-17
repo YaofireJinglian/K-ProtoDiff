@@ -1,0 +1,23 @@
+{
+  "dataset": "ETTh",
+  "method": "K-ProtoDiff-J",
+  "seed": 2026,
+  "provenance": "formal_tuned_confirmation",
+  "selection_split": "validation",
+  "selection_seeds": [
+    2031,
+    2032,
+    2033
+  ],
+  "frozen_validation_choice": "lr_prototype/gentle200",
+  "config_sha256": "baf2c09753220f5eee063c0c7830150d789ce8aa4c90b5c48ed66f952630f07c",
+  "metrics": {
+    "C-FID": 0.027887,
+    "KL": 0.003747,
+    "DS": 0.016236,
+    "PS": 0.123354,
+    "Seg-DTW-L6": 1.225432,
+    "Seg-DTW-L8": 1.415357,
+    "Seg-DTW-L10": 1.579676
+  }
+}

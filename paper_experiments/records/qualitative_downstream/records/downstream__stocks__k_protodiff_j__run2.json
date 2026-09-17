@@ -1,0 +1,9 @@
+{
+  "dataset": "stocks",
+  "method": "k_protodiff_j",
+  "generator_seed": 2027,
+  "predictor_seed": 5102,
+  "MAE": 0.012009864673018456,
+  "RMSE": 0.03183835372328758,
+  "epochs": 60
+}

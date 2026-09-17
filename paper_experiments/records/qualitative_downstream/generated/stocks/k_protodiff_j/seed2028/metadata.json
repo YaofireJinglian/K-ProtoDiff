@@ -1,0 +1,15 @@
+{
+  "dataset": "stocks",
+  "method": "K-ProtoDiff-J",
+  "seed": 2028,
+  "num_samples": 2048,
+  "shape": [
+    2048,
+    24,
+    6
+  ],
+  "scale": "[0, 1]",
+  "checkpoint": "checkpoints/journal_tuned/Checkpoints_journal_tuned_stocks_seed2028_24/checkpoint-10.pt",
+  "config": "Config/journal_tuned/stocks.yaml",
+  "sampling_seconds": 15.562078143993858
+}

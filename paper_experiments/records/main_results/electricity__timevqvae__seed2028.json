@@ -1,0 +1,42 @@
+{
+  "dataset": "Electricity",
+  "method": "TimeVQVAE",
+  "seed": 2028,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.318286,
+    "KL": 0.011806,
+    "DS": 0.499715,
+    "PS": 0.033962,
+    "Seg-DTW-L6": 8.860209,
+    "Seg-DTW-L8": 10.072981,
+    "Seg-DTW-L10": 11.013555
+  },
+  "run_config": {
+    "dataset": "Electricity",
+    "method": "timevqvae",
+    "seed": 2028,
+    "parameters": {
+      "batch_size": 32,
+      "stage1_steps": 20000,
+      "stage2_steps": 40000,
+      "lr": 0.005,
+      "min_lr": 0.0005,
+      "warmup_fraction": 0.05,
+      "seed": 2028
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_electricity_seed2026/samples/electricity_norm_truth_24_train.npy",
+    "data_shape": [
+      26281,
+      24,
+      321
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T21:54:20.808951+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

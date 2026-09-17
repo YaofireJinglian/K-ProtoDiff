@@ -1,0 +1,23 @@
+{
+  "dataset": "fMRI",
+  "method": "K-ProtoDiff-J",
+  "seed": 2027,
+  "provenance": "formal_tuned_confirmation",
+  "selection_split": "validation",
+  "selection_seeds": [
+    2031,
+    2032,
+    2033
+  ],
+  "frozen_validation_choice": "longer_training/gentle200",
+  "config_sha256": "1536907551ba377d27c7d1e65531858251a31b0a9495224b2b805a96495339d7",
+  "metrics": {
+    "C-FID": 0.178183,
+    "KL": 0.006377,
+    "DS": 0.175351,
+    "PS": 0.099204,
+    "Seg-DTW-L6": 3.011461,
+    "Seg-DTW-L8": 3.476146,
+    "Seg-DTW-L10": 3.882582
+  }
+}

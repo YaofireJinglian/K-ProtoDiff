@@ -1,0 +1,14 @@
+# Isolated TensorFlow runtime; shared evaluations use .venv.
+# Downstream sm_120 build; pinned release artifact and SHA256.
+tensorflow @ https://github.com/Syraxius/TensorflowDockerBuilder/releases/download/v2.21.0-sm120-cuda128-py310-py313/tensorflow-2.21.0%2Bselfbuild-cp311-cp311-linux_x86_64.whl#sha256=a2369ec430b3d0b58ab8df2781f250ff17a4ff9ea9f7cc1c8ea2920c3f63c037
+tf-keras==2.21.0
+nvidia-cudnn-cu12==9.8.0.87
+nvidia-cublas-cu12==12.8.3.14
+nvidia-cuda-nvrtc-cu12==12.8.61
+nvidia-cuda-nvcc-cu12==12.8.93
+tf-slim==1.1.0
+numpy==1.26.4
+pandas==1.5.3
+scikit-learn==1.5.2
+matplotlib==3.8.4
+pyyaml==6.0.2

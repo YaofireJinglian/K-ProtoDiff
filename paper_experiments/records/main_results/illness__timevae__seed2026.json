@@ -1,0 +1,45 @@
+{
+  "dataset": "Illness",
+  "method": "TimeVAE",
+  "seed": 2026,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.133288,
+    "KL": 0.017749,
+    "DS": 0.166667,
+    "PS": 0.03463,
+    "Seg-DTW-L6": 1.299938,
+    "Seg-DTW-L8": 1.510963,
+    "Seg-DTW-L10": 1.702649
+  },
+  "run_config": {
+    "dataset": "Illness",
+    "method": "timevae",
+    "seed": 2026,
+    "parameters": {
+      "max_epochs": 1000,
+      "latent_dim": 8,
+      "hidden_layer_sizes": [
+        50,
+        100,
+        200
+      ],
+      "reconstruction_wt": 3.0,
+      "batch_size": 16,
+      "use_residual_conn": true,
+      "trend_poly": 0,
+      "custom_seas": null,
+      "seed": 2026
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_illness_seed2026/samples/illness_norm_truth_24_train.npy",
+    "data_shape": [
+      943,
+      24,
+      7
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-09T13:45:30.994449+00:00"
+  }
+}

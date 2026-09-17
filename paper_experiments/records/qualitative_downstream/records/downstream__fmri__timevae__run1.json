@@ -1,0 +1,9 @@
+{
+  "dataset": "fmri",
+  "method": "timevae",
+  "generator_seed": 2026,
+  "predictor_seed": 5101,
+  "MAE": 0.10053062438964844,
+  "RMSE": 0.127446249127388,
+  "epochs": 17
+}

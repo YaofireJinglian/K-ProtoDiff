@@ -1,0 +1,89 @@
+{
+  "dataset": "Electricity",
+  "method": "K-ProtoDiff",
+  "seed": 2028,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.030811,
+    "KL": 0.002116,
+    "DS": 0.113658,
+    "PS": 0.021531,
+    "Seg-DTW-L6": 9.24687,
+    "Seg-DTW-L8": 10.548021,
+    "Seg-DTW-L10": 11.565896
+  },
+  "run_config": {
+    "dataset": "Electricity",
+    "method": "k_protodiff",
+    "seed": 2028,
+    "parameters": {
+      "config": {
+        "model": {
+          "target": "Models.KPD.k_diffusion.Model",
+          "params": {
+            "seq_length": 24,
+            "feature_size": 321,
+            "n_layer_enc": 4,
+            "n_layer_dec": 3,
+            "d_model": 128,
+            "timesteps": 1000,
+            "sampling_timesteps": 1000,
+            "loss_type": "l2",
+            "beta_schedule": "cosine",
+            "n_heads": 4,
+            "mlp_hidden_times": 4,
+            "attn_pd": 0.0,
+            "resid_pd": 0.0,
+            "kernel_size": 1,
+            "padding_size": 0,
+            "fdm_mode": "legacy",
+            "prototype_mode": "point",
+            "sampling_mode": "legacy"
+          }
+        },
+        "solver": {
+          "base_lr": 1e-05,
+          "max_epochs": 25000,
+          "results_folder": "./checkpoints/journal/Checkpoints_journal_electricity",
+          "gradient_accumulate_every": 2,
+          "save_cycle": 2500,
+          "ema": {
+            "decay": 0.995,
+            "update_interval": 10
+          },
+          "scheduler": {
+            "target": "Layer.engine.lr_sch.ReduceLROnPlateauWithWarmup",
+            "params": {
+              "factor": 0.5,
+              "patience": 5000,
+              "min_lr": 1e-05,
+              "threshold": 0.1,
+              "threshold_mode": "rel",
+              "warmup_lr": 0.0008,
+              "warmup": 500,
+              "verbose": false
+            }
+          }
+        },
+        "dataloader": {
+          "batch_size": 16
+        }
+      },
+      "sample_size": 128,
+      "seed": 2028
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_electricity_seed2026/samples/electricity_norm_truth_24_train.npy",
+    "data_shape": [
+      26281,
+      24,
+      321
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T23:55:49.560533+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

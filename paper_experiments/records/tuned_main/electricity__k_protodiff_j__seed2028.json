@@ -1,0 +1,23 @@
+{
+  "dataset": "Electricity",
+  "method": "K-ProtoDiff-J",
+  "seed": 2028,
+  "provenance": "formal_tuned_confirmation",
+  "selection_split": "validation",
+  "selection_seeds": [
+    2031,
+    2032,
+    2033
+  ],
+  "frozen_validation_choice": "longer_training/gentle200",
+  "config_sha256": "a33b87bdcafbc09cf659c0a6f347fa4163f22ecd7e65a5ec50da7d885b64cbbd",
+  "metrics": {
+    "C-FID": 0.019577,
+    "KL": 0.00289,
+    "DS": 0.361042,
+    "PS": 0.020253,
+    "Seg-DTW-L6": 9.240633,
+    "Seg-DTW-L8": 10.539449,
+    "Seg-DTW-L10": 11.552111
+  }
+}

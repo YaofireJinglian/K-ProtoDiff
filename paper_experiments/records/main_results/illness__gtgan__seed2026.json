@@ -1,0 +1,39 @@
+{
+  "dataset": "Illness",
+  "method": "GT-GAN",
+  "seed": 2026,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 1.639373,
+    "KL": 0.020627,
+    "DS": 0.386243,
+    "PS": 0.037395,
+    "Seg-DTW-L6": 1.369047,
+    "Seg-DTW-L8": 1.584911,
+    "Seg-DTW-L10": 1.785617
+  },
+  "run_config": {
+    "dataset": "Illness",
+    "method": "gtgan",
+    "seed": 2026,
+    "parameters": {
+      "first_epoch": 5000,
+      "max_steps": 6000,
+      "batch_size": 128,
+      "seed": 2026
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_illness_seed2026/samples/illness_norm_truth_24_train.npy",
+    "data_shape": [
+      943,
+      24,
+      7
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-12T05:19:23.085624+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

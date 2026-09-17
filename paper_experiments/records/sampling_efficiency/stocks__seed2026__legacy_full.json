@@ -1,0 +1,45 @@
+{
+  "dataset": "stocks",
+  "seed": 2026,
+  "mode": "legacy_full",
+  "measurements": [
+    {
+      "seconds": 5.725409858016064,
+      "samples_per_second": 5.589119520447476,
+      "peak_allocated_mib": 14.95556640625,
+      "peak_reserved_mib": 28.0,
+      "denoiser_calls": 510
+    },
+    {
+      "seconds": 5.731822864996502,
+      "samples_per_second": 5.582866176032732,
+      "peak_allocated_mib": 14.95556640625,
+      "peak_reserved_mib": 28.0,
+      "denoiser_calls": 510
+    },
+    {
+      "seconds": 5.737384309992194,
+      "samples_per_second": 5.577454510807127,
+      "peak_allocated_mib": 14.95556640625,
+      "peak_reserved_mib": 28.0,
+      "denoiser_calls": 510
+    }
+  ],
+  "checkpoint": "checkpoints/journal/Checkpoints_journal_stocks_seed2026_24/checkpoint-10.pt",
+  "batch_size": 32,
+  "shape": [
+    32,
+    24,
+    6
+  ],
+  "parameters": 376587,
+  "parameter_mib": 1.4365653991699219,
+  "torch_version": "2.9.1+cu130",
+  "cuda_version": "13.0",
+  "device": "NVIDIA GeForce RTX 5090",
+  "smoke": false,
+  "shared_gpu": false,
+  "scope": "sampling_only",
+  "timestamp": 1789272908.4263947,
+  "adaptive_stride_gain": 1.0
+}

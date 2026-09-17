@@ -1,0 +1,23 @@
+{
+  "dataset": "traffic",
+  "variant": "full",
+  "sampler": "ddim100",
+  "seed": 2026,
+  "metrics": {
+    "Context-FID": 1.800585,
+    "KL": 0.010268,
+    "DS_mean": 0.5,
+    "DS_std": 0.0,
+    "PS_mean": 0.023248,
+    "PS_std": 0.0,
+    "Segment-DTW-L6": 11.413276,
+    "Segment-DTW-L8": 13.047241,
+    "Segment-DTW-L10": 14.297168
+  },
+  "split": "validation",
+  "train_steps": 25000,
+  "seconds": 45.12829233700177,
+  "peak_mib": 259.69580078125,
+  "nfe_per_batch": 100.0,
+  "parameters_m": 12.168915
+}

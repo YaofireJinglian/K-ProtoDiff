@@ -1,0 +1,42 @@
+{
+  "dataset": "Traffic",
+  "method": "TimeVQVAE",
+  "seed": 2028,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.332925,
+    "KL": 0.012442,
+    "DS": 0.499287,
+    "PS": 0.018599,
+    "Seg-DTW-L6": 10.192802,
+    "Seg-DTW-L8": 11.561735,
+    "Seg-DTW-L10": 12.545763
+  },
+  "run_config": {
+    "dataset": "Traffic",
+    "method": "timevqvae",
+    "seed": 2028,
+    "parameters": {
+      "batch_size": 32,
+      "stage1_steps": 20000,
+      "stage2_steps": 40000,
+      "lr": 0.005,
+      "min_lr": 0.0005,
+      "warmup_fraction": 0.05,
+      "seed": 2028
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_traffic_seed2026/samples/traffic_norm_truth_24_train.npy",
+    "data_shape": [
+      17521,
+      24,
+      862
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-12T01:28:46.833666+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

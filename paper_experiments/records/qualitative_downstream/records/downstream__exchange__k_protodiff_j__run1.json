@@ -1,0 +1,9 @@
+{
+  "dataset": "exchange",
+  "method": "k_protodiff_j",
+  "generator_seed": 2026,
+  "predictor_seed": 5101,
+  "MAE": 0.006755942478775978,
+  "RMSE": 0.009626609273254871,
+  "epochs": 60
+}

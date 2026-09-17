@@ -1,0 +1,9 @@
+{
+  "dataset": "exchange",
+  "method": "timevae",
+  "generator_seed": 2027,
+  "predictor_seed": 5102,
+  "MAE": 0.007317683193832636,
+  "RMSE": 0.010425074025988579,
+  "epochs": 60
+}

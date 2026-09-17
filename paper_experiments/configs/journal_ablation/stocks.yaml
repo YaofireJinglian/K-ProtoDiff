@@ -1,0 +1,74 @@
+dataset: stocks
+seed: 2026
+base_config: Config/journal/stocks.yaml
+training_steps: 12000
+validation_samples: 1024
+sampling_batch: 32
+evaluation_split: validation
+training_variants:
+  full: {}
+  point:
+    prototype_mode: point
+  point24:
+    prototype_mode: point
+    num_prototypes: 24
+  scale4:
+    prototype_scales:
+    - 4
+    num_prototypes: 24
+  scale8:
+    prototype_scales:
+    - 8
+    num_prototypes: 24
+  scale16:
+    prototype_scales:
+    - 16
+    num_prototypes: 24
+  scale4_8:
+    prototype_scales:
+    - 4
+    - 8
+    num_prototypes: 12
+  no_aux:
+    prototype_loss_weight: 0.0
+  no_consistency:
+    prototype_consistency_weight: 0.0
+  no_balance:
+    prototype_balance_weight: 0.0
+  no_diversity:
+    prototype_diversity_weight: 0.0
+sampler_grid:
+  full:
+  - legacy_full
+  - fixed_reflection50
+  - no_correction50
+  - ddim10
+  - ddim20
+  - ddim50
+  - ddim100
+  - ddim200
+  - adaptive10
+  - adaptive20
+  - adaptive50
+  - adaptive100
+  - adaptive200
+  point:
+  - legacy_full
+  point24:
+  - legacy_full
+  scale4:
+  - adaptive50
+  scale8:
+  - adaptive50
+  scale16:
+  - adaptive50
+  scale4_8:
+  - adaptive50
+  no_aux:
+  - adaptive50
+  no_consistency:
+  - adaptive50
+  no_balance:
+  - adaptive50
+  no_diversity:
+  - adaptive50

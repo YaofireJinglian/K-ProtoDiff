@@ -1,0 +1,23 @@
+{
+  "dataset": "Illness",
+  "method": "K-ProtoDiff-J",
+  "seed": 2026,
+  "provenance": "formal_tuned_confirmation",
+  "selection_split": "validation",
+  "selection_seeds": [
+    2031,
+    2032,
+    2033
+  ],
+  "frozen_validation_choice": "slower_ema/gentle200",
+  "config_sha256": "1fb12d75f494e389a9eb0ea4b84dc36a4d804aa21c17993b2d7b7def7a939e4c",
+  "metrics": {
+    "C-FID": 0.250351,
+    "KL": 0.057955,
+    "DS": 0.26455,
+    "PS": 0.032973,
+    "Seg-DTW-L6": 1.271054,
+    "Seg-DTW-L8": 1.477595,
+    "Seg-DTW-L10": 1.659923
+  }
+}

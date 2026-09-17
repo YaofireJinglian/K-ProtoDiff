@@ -1,0 +1,255 @@
+{
+  "release_tag": "journal-v1-weights",
+  "repository": "YaofireJinglian/KPD-Journal",
+  "created_utc": "2026-09-15T08:38:47.591612+00:00",
+  "selection_split": "validation",
+  "formal_seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "note": "All three formal seeds are provided; no test-seed cherry-picking.",
+  "assets": [
+    {
+      "dataset": "fmri",
+      "asset": "kpd-journal-fmri-3seeds.tar",
+      "bytes": 77690880,
+      "sha256": "375fceb47f050b4e1d08315fa7b86e717783acdd846571315bd9a504e36e38e5",
+      "candidate": "longer_training/gentle200",
+      "members": [
+        {
+          "seed": 2026,
+          "checkpoint_sha256": "c32f0e0ad0c7f05ab863ed3e6b1a101aca6a73c4bc8992416abba20bd5950aea",
+          "checkpoint_bytes": 25889523
+        },
+        {
+          "seed": 2027,
+          "checkpoint_sha256": "222719e46834b14f402222ec4857e68a04a99f644598185e9dfadcbeca0f330c",
+          "checkpoint_bytes": 25889523
+        },
+        {
+          "seed": 2028,
+          "checkpoint_sha256": "272259bb2b92296b0c916afe9b659507479cda1dd3e217652d75e85dbc4e354d",
+          "checkpoint_bytes": 25889523
+        }
+      ]
+    },
+    {
+      "dataset": "energy",
+      "asset": "kpd-journal-energy-3seeds.tar",
+      "bytes": 61368320,
+      "sha256": "0c2d17ed949b87c1e3761cd83712a6c063dfd0f2769c587f2127502677dc0119",
+      "candidate": "control/original50",
+      "members": [
+        {
+          "seed": 2026,
+          "checkpoint_sha256": "b9115081f70feb117cefebb56d51b716f71756888cd266f7edb02dd70b8dddec",
+          "checkpoint_bytes": 20448225
+        },
+        {
+          "seed": 2027,
+          "checkpoint_sha256": "e35f205d4ce0623f2e3f5a003eafd57e0a4333ac932461c7a50ae0bbd54f9c09",
+          "checkpoint_bytes": 20448225
+        },
+        {
+          "seed": 2028,
+          "checkpoint_sha256": "934a93628657e7d2374e6c343ca0c1975810e7aced547c48458ad5aedf8472aa",
+          "checkpoint_bytes": 20448225
+        }
+      ]
+    },
+    {
+      "dataset": "traffic",
+      "asset": "kpd-journal-traffic-3seeds.tar",
+      "bytes": 586649600,
+      "sha256": "e504189e98dfc5699cf237662dcd3ea69c3f6dc8d15c887de807353648f84213",
+      "candidate": "longer_training/gentle200",
+      "members": [
+        {
+          "seed": 2026,
+          "checkpoint_sha256": "bc2308bed752e9edd8bab0e61e55be04a9f8513231d4d30e35bdf9412df9f4cd",
+          "checkpoint_bytes": 195542881
+        },
+        {
+          "seed": 2027,
+          "checkpoint_sha256": "7befdca16098ff34f3c923a97f1fd243c58ccb91116c9a3197360ad8f1ddfd8a",
+          "checkpoint_bytes": 195542881
+        },
+        {
+          "seed": 2028,
+          "checkpoint_sha256": "ebaac52b40ab130633d00b2fa5cbcd531817a76cc408926f15a0ff7ec09b671a",
+          "checkpoint_bytes": 195542881
+        }
+      ]
+    },
+    {
+      "dataset": "electricity",
+      "asset": "kpd-journal-electricity-3seeds.tar",
+      "bytes": 211630080,
+      "sha256": "b856ce7f72e9c3a64615c94da71492a97078b186c968855ae988c62cf4e93705",
+      "candidate": "longer_training/gentle200",
+      "members": [
+        {
+          "seed": 2026,
+          "checkpoint_sha256": "ebd7d0466063f4254aa8ee114ca9523fa15e847881fef94e315b1a60537ad4f5",
+          "checkpoint_bytes": 70534753
+        },
+        {
+          "seed": 2027,
+          "checkpoint_sha256": "649d7b92aa6fb17c8cff8544c50ea9e230a950620c254182de00e0a0e1a51758",
+          "checkpoint_bytes": 70534753
+        },
+        {
+          "seed": 2028,
+          "checkpoint_sha256": "762f43312d00c627bb1698a3eadb04732593d353e531a96bd1b4a61f6da41288",
+          "checkpoint_bytes": 70534753
+        }
+      ]
+    },
+    {
+      "dataset": "etth",
+      "asset": "kpd-journal-etth-3seeds.tar",
+      "bytes": 20336640,
+      "sha256": "8f08f2af5943046de1b8768dd14fd6d631784857b8603cf3bb42b02eaac9022c",
+      "candidate": "lr_prototype/gentle200",
+      "members": [
+        {
+          "seed": 2026,
+          "checkpoint_sha256": "533e43712cdbd7a7e92d30f93b4c81e17969ccfb6ba1642a6e418a10e98ada68",
+          "checkpoint_bytes": 6772351
+        },
+        {
+          "seed": 2027,
+          "checkpoint_sha256": "baff7181faebfcd94c299df79c77c42dba517ae2b0d83768386e2b243d0f063f",
+          "checkpoint_bytes": 6772351
+        },
+        {
+          "seed": 2028,
+          "checkpoint_sha256": "ce0dc3975001d9832f59a95426c4f379dc1dfbb81df19c5f4a0b904b7f95abba",
+          "checkpoint_bytes": 6772351
+        }
+      ]
+    },
+    {
+      "dataset": "weather",
+      "asset": "kpd-journal-weather-3seeds.tar",
+      "bytes": 59770880,
+      "sha256": "913a5dd940dc0570289ad1e71543e74536bfd31f290f0e1b5786a5ada976d091",
+      "candidate": "lr_prototype/original50",
+      "members": [
+        {
+          "seed": 2026,
+          "checkpoint_sha256": "fa14158a8c8e962e85a6b3fc4254140559148b67aa7981e1761ee4546bd9f825",
+          "checkpoint_bytes": 19915745
+        },
+        {
+          "seed": 2027,
+          "checkpoint_sha256": "699d10d2071313e79be28156ba557e0baba2fe65a944371df1209ebf2e142149",
+          "checkpoint_bytes": 19915745
+        },
+        {
+          "seed": 2028,
+          "checkpoint_sha256": "980cbee6e047fb882354fb49113a431334cc3038e1c6830f25317cb5b6055516",
+          "checkpoint_bytes": 19915745
+        }
+      ]
+    },
+    {
+      "dataset": "illness",
+      "asset": "kpd-journal-illness-3seeds.tar",
+      "bytes": 20336640,
+      "sha256": "a6a16c67d6587bba6a82b4ff5e12e82a2cd9e33a74d1e79e25a07287de075c4b",
+      "candidate": "slower_ema/gentle200",
+      "members": [
+        {
+          "seed": 2026,
+          "checkpoint_sha256": "47c56dc06896d73afd7bac087cebbc1fdba48348278bc533fd0841fda73ed794",
+          "checkpoint_bytes": 6772351
+        },
+        {
+          "seed": 2027,
+          "checkpoint_sha256": "0a6ed2fb96517a5638fe68d43389578c82198e69ed3833c4a29f4865503f9566",
+          "checkpoint_bytes": 6772351
+        },
+        {
+          "seed": 2028,
+          "checkpoint_sha256": "ea29b53ec0a3a10b00c3622ad10f8790151755f1802c9c23ddf9d1422d16fa4d",
+          "checkpoint_bytes": 6772351
+        }
+      ]
+    },
+    {
+      "dataset": "exchange",
+      "asset": "kpd-journal-exchange-3seeds.tar",
+      "bytes": 20510720,
+      "sha256": "8cd882786c60d697b730250d0a4e933c9695b8819b26337f09cf155b1a9e984c",
+      "candidate": "control/gentle200",
+      "members": [
+        {
+          "seed": 2026,
+          "checkpoint_sha256": "837a09f4db5384416edd6c0a1744edd6956902d53e3146295f0a992e14ed89a7",
+          "checkpoint_bytes": 6830207
+        },
+        {
+          "seed": 2027,
+          "checkpoint_sha256": "f98f6c7a19bffeec10ea81932cf9c7dc3af0e221e663469caf2dc1ec022c86dc",
+          "checkpoint_bytes": 6830207
+        },
+        {
+          "seed": 2028,
+          "checkpoint_sha256": "bbebd5f1617bf9d7e6a8a9cc87eaa215d53f364aff8f1ec7e59ab229d9169bbb",
+          "checkpoint_bytes": 6830207
+        }
+      ]
+    },
+    {
+      "dataset": "stocks",
+      "asset": "kpd-journal-stocks-3seeds.tar",
+      "bytes": 20162560,
+      "sha256": "ce5ad9dd4c1c434d6cf8609ea327a78a4dfa479110bdeed147d3ea6d87403419",
+      "candidate": "lr_prototype/gentle200",
+      "members": [
+        {
+          "seed": 2026,
+          "checkpoint_sha256": "d38fedb2a228a6186b288e0474ecde06caa849acd038f9b43c19fce4cc2d9f9b",
+          "checkpoint_bytes": 6714495
+        },
+        {
+          "seed": 2027,
+          "checkpoint_sha256": "bd21b4dcd32fa0309f52451d60222c1e9273c4bf013c53a91e074255331d449c",
+          "checkpoint_bytes": 6714495
+        },
+        {
+          "seed": 2028,
+          "checkpoint_sha256": "694a1d527b73a71c62c3eaed65badf7c59fe72d885447273bb64bb7465db62a3",
+          "checkpoint_bytes": 6714495
+        }
+      ]
+    },
+    {
+      "dataset": "eeg",
+      "asset": "kpd-journal-eeg-3seeds.tar",
+      "bytes": 21575680,
+      "sha256": "f0d93da53be6d02ac2064d093d0915b4d6ddeffe2d946d6623a9958f71ef1568",
+      "candidate": "lr_prototype/gentle200",
+      "members": [
+        {
+          "seed": 2026,
+          "checkpoint_sha256": "bf29127b3f6e063346d95d52bf53ca6d74396bdf5114377d18df8df60ee1aef2",
+          "checkpoint_bytes": 7182911
+        },
+        {
+          "seed": 2027,
+          "checkpoint_sha256": "39c54b786b0fe5bd468b2cdd8662e1aa48ca2fd291c71df43a2bc98c1faf2fe4",
+          "checkpoint_bytes": 7182911
+        },
+        {
+          "seed": 2028,
+          "checkpoint_sha256": "eb34d42846054d84318a4a229d878cd11b9b9da8e36160443f2a756a42f70c33",
+          "checkpoint_bytes": 7182911
+        }
+      ]
+    }
+  ],
+  "release_url": "https://github.com/YaofireJinglian/KPD-Journal/releases/tag/journal-v1-weights"
+}

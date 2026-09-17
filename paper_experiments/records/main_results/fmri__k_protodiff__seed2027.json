@@ -1,0 +1,14 @@
+{
+  "dataset": "fMRI",
+  "method": "K-ProtoDiff",
+  "seed": 2027,
+  "metrics": {
+    "C-FID": 3.902533,
+    "KL": 0.123609,
+    "DS": 0.498747,
+    "PS": 0.142433,
+    "Seg-DTW-L6": 2.662073,
+    "Seg-DTW-L8": 3.067814,
+    "Seg-DTW-L10": 3.424326
+  }
+}

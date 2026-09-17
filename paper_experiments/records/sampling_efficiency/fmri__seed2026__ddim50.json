@@ -1,0 +1,45 @@
+{
+  "dataset": "fmri",
+  "seed": 2026,
+  "mode": "ddim50",
+  "measurements": [
+    {
+      "seconds": 0.8003220040118322,
+      "samples_per_second": 39.98390627721252,
+      "peak_allocated_mib": 22.54833984375,
+      "peak_reserved_mib": 34.0,
+      "denoiser_calls": 50
+    },
+    {
+      "seconds": 0.7992469299933873,
+      "samples_per_second": 40.037688978379634,
+      "peak_allocated_mib": 22.54833984375,
+      "peak_reserved_mib": 34.0,
+      "denoiser_calls": 50
+    },
+    {
+      "seconds": 0.8003388000070117,
+      "samples_per_second": 39.98306717070277,
+      "peak_allocated_mib": 22.54833984375,
+      "peak_reserved_mib": 34.0,
+      "denoiser_calls": 50
+    }
+  ],
+  "checkpoint": "checkpoints/journal/Checkpoints_journal_fmri_seed2026_24/checkpoint-10.pt",
+  "batch_size": 32,
+  "shape": [
+    32,
+    24,
+    50
+  ],
+  "parameters": 1561547,
+  "parameter_mib": 5.956829071044922,
+  "torch_version": "2.9.1+cu130",
+  "cuda_version": "13.0",
+  "device": "NVIDIA GeForce RTX 5090",
+  "smoke": false,
+  "shared_gpu": false,
+  "scope": "sampling_only",
+  "timestamp": 1789273388.7806282,
+  "adaptive_stride_gain": 1.0
+}

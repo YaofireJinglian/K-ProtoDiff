@@ -1,0 +1,32 @@
+{
+  "dataset": "fMRI",
+  "method": "TimeGAN",
+  "seed": 2028,
+  "metrics": {
+    "C-FID": 1.397579,
+    "KL": 0.037235,
+    "DS": 0.499749,
+    "PS": 0.136987,
+    "Seg-DTW-L6": 3.10103,
+    "Seg-DTW-L8": 3.580018,
+    "Seg-DTW-L10": 3.99718
+  },
+  "run_config": {
+    "method": "timegan",
+    "seed": 2028,
+    "gpu": 5,
+    "parameters": {
+      "module": "gru",
+      "hidden_dim": 24,
+      "num_layer": 3,
+      "iterations": 50000,
+      "batch_size": 256,
+      "seed": 2028
+    },
+    "smoke": false,
+    "tf_intra_threads": 4,
+    "tf_inter_threads": 2,
+    "tf_xla": true,
+    "launched_at": "2026-09-08T04:24:53.395768+00:00"
+  }
+}

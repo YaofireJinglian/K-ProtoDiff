@@ -1,0 +1,41 @@
+{
+  "dataset": "EEG",
+  "method": "TimeGAN",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.051058,
+    "KL": 0.088888,
+    "DS": 0.334598,
+    "PS": 0.028292,
+    "Seg-DTW-L6": 0.552673,
+    "Seg-DTW-L8": 0.588105,
+    "Seg-DTW-L10": 0.674207
+  },
+  "run_config": {
+    "dataset": "EEG",
+    "method": "timegan",
+    "seed": 2027,
+    "parameters": {
+      "module": "gru",
+      "hidden_dim": 24,
+      "num_layer": 3,
+      "iterations": 50000,
+      "batch_size": 256,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_eeg_seed2026/samples/eeg_norm_truth_24_train.npy",
+    "data_shape": [
+      11863,
+      24,
+      14
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-12T16:45:50.285411+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": true,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

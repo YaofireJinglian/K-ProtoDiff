@@ -1,0 +1,15 @@
+{
+  "dataset": "exchange",
+  "method": "K-ProtoDiff-J",
+  "seed": 2026,
+  "num_samples": 2048,
+  "shape": [
+    2048,
+    24,
+    8
+  ],
+  "scale": "[0, 1]",
+  "checkpoint": "checkpoints/journal/Checkpoints_journal_exchange_seed2026_24/checkpoint-10.pt",
+  "config": "Config/journal_tuned/exchange.yaml",
+  "sampling_seconds": 18.715500460995827
+}

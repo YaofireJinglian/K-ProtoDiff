@@ -1,0 +1,14 @@
+{
+  "dataset": "fMRI",
+  "method": "Diffusion-TS",
+  "seed": 2027,
+  "metrics": {
+    "C-FID": 0.114107,
+    "KL": 0.002408,
+    "DS": 0.120741,
+    "PS": 0.099646,
+    "Seg-DTW-L6": 3.069889,
+    "Seg-DTW-L8": 3.544673,
+    "Seg-DTW-L10": 3.95739
+  }
+}

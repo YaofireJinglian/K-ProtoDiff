@@ -1,0 +1,41 @@
+{
+  "dataset": "Energy",
+  "method": "TimeGAN",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.682529,
+    "KL": 0.010131,
+    "DS": 0.497844,
+    "PS": 0.320166,
+    "Seg-DTW-L6": 3.254045,
+    "Seg-DTW-L8": 3.748339,
+    "Seg-DTW-L10": 4.178661
+  },
+  "run_config": {
+    "dataset": "Energy",
+    "method": "timegan",
+    "seed": 2027,
+    "parameters": {
+      "module": "gru",
+      "hidden_dim": 24,
+      "num_layer": 3,
+      "iterations": 50000,
+      "batch_size": 256,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_energy_seed2026/samples/energy_norm_truth_24_train.npy",
+    "data_shape": [
+      19712,
+      24,
+      28
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-12T23:04:20.818043+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": true,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

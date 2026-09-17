@@ -1,0 +1,41 @@
+{
+  "dataset": "Traffic",
+  "method": "TimeGAN",
+  "seed": 2026,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.575965,
+    "KL": 0.00704,
+    "DS": 0.5,
+    "PS": 0.021728,
+    "Seg-DTW-L6": 10.655175,
+    "Seg-DTW-L8": 12.167874,
+    "Seg-DTW-L10": 13.204565
+  },
+  "run_config": {
+    "dataset": "Traffic",
+    "method": "timegan",
+    "seed": 2026,
+    "parameters": {
+      "module": "gru",
+      "hidden_dim": 24,
+      "num_layer": 3,
+      "iterations": 50000,
+      "batch_size": 256,
+      "seed": 2026
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_traffic_seed2026/samples/traffic_norm_truth_24_train.npy",
+    "data_shape": [
+      17521,
+      24,
+      862
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-13T17:01:16.905759+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": true,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

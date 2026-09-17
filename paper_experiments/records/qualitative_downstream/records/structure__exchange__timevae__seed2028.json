@@ -1,0 +1,9 @@
+{
+  "dataset": "exchange",
+  "method": "timevae",
+  "seed": 2028,
+  "ACF": 0.0034050913527607918,
+  "Spectrum_x100": 1.4369478846890598,
+  "Correlation": 0.0245495612610782,
+  "Trend_x100": 0.470861978828907
+}

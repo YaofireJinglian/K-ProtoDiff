@@ -1,0 +1,23 @@
+{
+  "dataset": "Traffic",
+  "method": "K-ProtoDiff-J",
+  "seed": 2027,
+  "provenance": "formal_tuned_confirmation",
+  "selection_split": "validation",
+  "selection_seeds": [
+    2031,
+    2032,
+    2033
+  ],
+  "frozen_validation_choice": "longer_training/gentle200",
+  "config_sha256": "e9638778fa48fca5230202cb59dc88e7e52fd6b3082aa56f713dea0c0bd3076a",
+  "metrics": {
+    "C-FID": 0.123867,
+    "KL": 0.002607,
+    "DS": 0.498859,
+    "PS": 0.010141,
+    "Seg-DTW-L6": 10.313531,
+    "Seg-DTW-L8": 11.750964,
+    "Seg-DTW-L10": 12.805363
+  }
+}

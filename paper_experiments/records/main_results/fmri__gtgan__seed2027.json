@@ -1,0 +1,36 @@
+{
+  "dataset": "fMRI",
+  "method": "GT-GAN",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 14.468559,
+    "KL": 0.098114,
+    "DS": 0.499248,
+    "PS": 0.153917,
+    "Seg-DTW-L6": 3.876705,
+    "Seg-DTW-L8": 4.478434,
+    "Seg-DTW-L10": 5.007348
+  },
+  "run_config": {
+    "dataset": "fMRI",
+    "method": "gtgan",
+    "seed": 2027,
+    "parameters": {
+      "first_epoch": 5000,
+      "max_steps": 6000,
+      "batch_size": 128,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_fmri_seed2026/samples/fMRI_norm_truth_24_train.npy",
+    "data_shape": [
+      9977,
+      24,
+      50
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-09T13:45:31.952833+00:00"
+  }
+}

@@ -1,0 +1,148 @@
+dataset: EEG
+real_path: OUTPUT/formal/journal_eeg_seed2026/samples/eeg_norm_truth_24_train.npy
+seeds:
+- 2026
+- 2027
+- 2028
+timegan:
+  module: gru
+  hidden_dim: 24
+  num_layer: 3
+  iterations: 50000
+  batch_size: 256
+timevae:
+  max_epochs: 1000
+  latent_dim: 8
+  hidden_layer_sizes:
+  - 50
+  - 100
+  - 200
+  reconstruction_wt: 3.0
+  batch_size: 16
+  use_residual_conn: true
+  trend_poly: 0
+  custom_seas: null
+timevqvae:
+  batch_size: 32
+  stage1_steps: 20000
+  stage2_steps: 40000
+  lr: 0.005
+  min_lr: 0.0005
+  warmup_fraction: 0.05
+gtgan:
+  first_epoch: 5000
+  max_steps: 6000
+  batch_size: 128
+protocol_note: New shared-array reproduction, fixed transferred budgets; not an exact
+  recovery of published experiments
+diffusion_ts:
+  config:
+    model:
+      target: Models.interpretable_diffusion.gaussian_diffusion.Diffusion_TS
+      params:
+        seq_length: 24
+        feature_size: 14
+        n_layer_enc: 3
+        n_layer_dec: 2
+        d_model: 64
+        timesteps: 500
+        sampling_timesteps: 500
+        loss_type: l2
+        beta_schedule: cosine
+        n_heads: 4
+        mlp_hidden_times: 4
+        attn_pd: 0.0
+        resid_pd: 0.0
+        kernel_size: 1
+        padding_size: 0
+    solver:
+      base_lr: 1.0e-05
+      max_epochs: 12000
+      results_folder: ./checkpoints/journal/Checkpoints_journal_eeg
+      gradient_accumulate_every: 2
+      save_cycle: 1200
+      ema:
+        decay: 0.995
+        update_interval: 10
+      scheduler:
+        target: engine.lr_sch.ReduceLROnPlateauWithWarmup
+        params:
+          factor: 0.5
+          patience: 3000
+          min_lr: 1.0e-05
+          threshold: 0.1
+          threshold_mode: rel
+          warmup_lr: 0.0008
+          warmup: 500
+          verbose: false
+    dataloader:
+      batch_size: 128
+  sample_size: 128
+k_protodiff:
+  config:
+    model:
+      target: Models.KPD.k_diffusion.Model
+      params:
+        seq_length: 24
+        feature_size: 14
+        n_layer_enc: 3
+        n_layer_dec: 2
+        d_model: 64
+        timesteps: 500
+        sampling_timesteps: 500
+        loss_type: l2
+        beta_schedule: cosine
+        n_heads: 4
+        mlp_hidden_times: 4
+        attn_pd: 0.0
+        resid_pd: 0.0
+        kernel_size: 1
+        padding_size: 0
+        fdm_mode: legacy
+        prototype_mode: point
+        sampling_mode: legacy
+    solver:
+      base_lr: 1.0e-05
+      max_epochs: 12000
+      results_folder: ./checkpoints/journal/Checkpoints_journal_eeg
+      gradient_accumulate_every: 2
+      save_cycle: 1200
+      ema:
+        decay: 0.995
+        update_interval: 10
+      scheduler:
+        target: Layer.engine.lr_sch.ReduceLROnPlateauWithWarmup
+        params:
+          factor: 0.5
+          patience: 3000
+          min_lr: 1.0e-05
+          threshold: 0.1
+          threshold_mode: rel
+          warmup_lr: 0.0008
+          warmup: 500
+          verbose: false
+    dataloader:
+      batch_size: 128
+  sample_size: 128
+pad_ts:
+  model:
+    hidden_size: 256
+    num_heads: 4
+    n_encoder: 1
+    n_decoder: 3
+    feature_last: true
+    mlp_ratio: 4.0
+  diffusion:
+    predict_xstart: true
+    diffusion_steps: 500
+    noise_schedule: cosine
+    loss: MSE_MMD
+    rescale_timesteps: false
+  batch_size: 32
+  training:
+    lr: 0.0001
+    weight_decay: 0.0
+    lr_anneal_steps: 70000
+    log_interval: 10
+    save_interval: 5000
+    mmd_alpha: 2.0e-05

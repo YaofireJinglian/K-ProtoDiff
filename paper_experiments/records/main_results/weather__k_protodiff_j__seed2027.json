@@ -1,0 +1,23 @@
+{
+  "dataset": "Weather",
+  "method": "K-ProtoDiff-J",
+  "seed": 2027,
+  "provenance": "formal_tuned_confirmation",
+  "selection_split": "validation",
+  "selection_seeds": [
+    2031,
+    2032,
+    2033
+  ],
+  "frozen_validation_choice": "lr_prototype/original50",
+  "config_sha256": "752f0e89d9af0f754461e9ae8eb7dc2780ae52e2d1f18a54bea7545579986443",
+  "metrics": {
+    "C-FID": 0.092775,
+    "KL": 0.001446,
+    "DS": 0.343094,
+    "PS": 0.002401,
+    "Seg-DTW-L6": 2.267104,
+    "Seg-DTW-L8": 2.618786,
+    "Seg-DTW-L10": 2.928532
+  }
+}

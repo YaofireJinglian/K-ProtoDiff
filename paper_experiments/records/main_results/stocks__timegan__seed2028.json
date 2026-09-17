@@ -1,0 +1,41 @@
+{
+  "dataset": "Stocks",
+  "method": "TimeGAN",
+  "seed": 2028,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.097836,
+    "KL": 0.143725,
+    "DS": 0.049113,
+    "PS": 0.038124,
+    "Seg-DTW-L6": 1.532454,
+    "Seg-DTW-L8": 1.771513,
+    "Seg-DTW-L10": 1.977601
+  },
+  "run_config": {
+    "dataset": "Stocks",
+    "method": "timegan",
+    "seed": 2028,
+    "parameters": {
+      "module": "gru",
+      "hidden_dim": 24,
+      "num_layer": 3,
+      "iterations": 50000,
+      "batch_size": 256,
+      "seed": 2028
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_stocks_seed2026/samples/stocks_norm_truth_24_train.npy",
+    "data_shape": [
+      3662,
+      24,
+      6
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T19:36:47.549061+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": true,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

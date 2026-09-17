@@ -1,0 +1,9 @@
+{
+  "dataset": "fmri",
+  "method": "real",
+  "generator_seed": null,
+  "predictor_seed": 5103,
+  "MAE": 0.09708651900291443,
+  "RMSE": 0.12328419089317322,
+  "epochs": 20
+}

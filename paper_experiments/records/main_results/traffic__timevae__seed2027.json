@@ -1,0 +1,48 @@
+{
+  "dataset": "Traffic",
+  "method": "TimeVAE",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.361489,
+    "KL": 0.009563,
+    "DS": 0.493723,
+    "PS": 0.007706,
+    "Seg-DTW-L6": 10.893132,
+    "Seg-DTW-L8": 12.474924,
+    "Seg-DTW-L10": 13.668106
+  },
+  "run_config": {
+    "dataset": "Traffic",
+    "method": "timevae",
+    "seed": 2027,
+    "parameters": {
+      "max_epochs": 1000,
+      "latent_dim": 8,
+      "hidden_layer_sizes": [
+        50,
+        100,
+        200
+      ],
+      "reconstruction_wt": 3.0,
+      "batch_size": 16,
+      "use_residual_conn": true,
+      "trend_poly": 0,
+      "custom_seas": null,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_traffic_seed2026/samples/traffic_norm_truth_24_train.npy",
+    "data_shape": [
+      17521,
+      24,
+      862
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-12T01:49:09.420017+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

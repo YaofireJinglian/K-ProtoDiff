@@ -1,0 +1,42 @@
+{
+  "dataset": "Illness",
+  "method": "TimeVQVAE",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.073595,
+    "KL": 0.01025,
+    "DS": 0.238095,
+    "PS": 0.037031,
+    "Seg-DTW-L6": 1.255746,
+    "Seg-DTW-L8": 1.457934,
+    "Seg-DTW-L10": 1.636215
+  },
+  "run_config": {
+    "dataset": "Illness",
+    "method": "timevqvae",
+    "seed": 2027,
+    "parameters": {
+      "batch_size": 32,
+      "stage1_steps": 20000,
+      "stage2_steps": 40000,
+      "lr": 0.005,
+      "min_lr": 0.0005,
+      "warmup_fraction": 0.05,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_illness_seed2026/samples/illness_norm_truth_24_train.npy",
+    "data_shape": [
+      943,
+      24,
+      7
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-11T11:29:06.653901+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": false,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}

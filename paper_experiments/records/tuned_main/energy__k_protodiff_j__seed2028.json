@@ -1,0 +1,16 @@
+{
+  "dataset": "Energy",
+  "method": "K-ProtoDiff-J",
+  "seed": 2028,
+  "metrics": {
+    "C-FID": 0.103666,
+    "KL": 0.006548,
+    "DS": 0.25894,
+    "PS": 0.2521,
+    "Seg-DTW-L6": 3.12198,
+    "Seg-DTW-L8": 3.594848,
+    "Seg-DTW-L10": 4.010575
+  },
+  "provenance": "formal_control_reuse",
+  "frozen_validation_choice": "control/original50"
+}

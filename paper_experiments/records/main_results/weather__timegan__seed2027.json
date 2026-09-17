@@ -1,0 +1,41 @@
+{
+  "dataset": "Weather",
+  "method": "TimeGAN",
+  "seed": 2027,
+  "provenance": "local_reproduction",
+  "evaluator": "eval_seeded.py",
+  "metrics": {
+    "C-FID": 0.213303,
+    "KL": 0.014819,
+    "DS": 0.250783,
+    "PS": 0.002313,
+    "Seg-DTW-L6": 2.34024,
+    "Seg-DTW-L8": 2.704941,
+    "Seg-DTW-L10": 3.02633
+  },
+  "run_config": {
+    "dataset": "Weather",
+    "method": "timegan",
+    "seed": 2027,
+    "parameters": {
+      "module": "gru",
+      "hidden_dim": 24,
+      "num_layer": 3,
+      "iterations": 50000,
+      "batch_size": 256,
+      "seed": 2027
+    },
+    "smoke": false,
+    "real_path": "/data/dyh_data/0806/K-ProtoDiff/OUTPUT/formal/journal_weather_seed2026/samples/weather_norm_truth_24_train.npy",
+    "data_shape": [
+      52673,
+      24,
+      21
+    ],
+    "protocol": "local full-data baseline reproduction; not paper-exact metrics",
+    "launched_at": "2026-09-13T12:24:39.617846+00:00",
+    "execution_version": "baseline-throughput-v1",
+    "tf_xla": true,
+    "sampling_protocol": "fixed chunk seeds for diffusion_ts/k_protodiff"
+  }
+}
