@@ -28,9 +28,14 @@ def main():
             continue
         rel = Path(name)
         src = ROOT / rel
+        is_archived_figure_pdf = (
+            src.suffix.lower() == '.pdf'
+            and rel.parts[:2] == ('paper_experiments', 'figures')
+        )
         if (rel.parts[0] in {'baselines', 'OUTPUT', 'checkpoints'}
                 or '__pycache__' in rel.parts or src.is_symlink()
-                or src.suffix.lower() in {'.pdf', '.pyc', '.npy', '.pt', '.pth'}
+                or (src.suffix.lower() == '.pdf' and not is_archived_figure_pdf)
+                or src.suffix.lower() in {'.pyc', '.npy', '.pt', '.pth'}
                 or not src.is_file()):
             continue
         target = dest / rel
