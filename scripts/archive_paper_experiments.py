@@ -6,6 +6,8 @@ import hashlib
 import json
 import os
 import shutil
+import subprocess
+import sys
 from pathlib import Path
 
 
@@ -55,6 +57,7 @@ SCRIPTS = [
     "scripts/benchmark_training_efficiency.py",
     "scripts/generate_analysis_samples.py",
     "scripts/evaluate_qualitative_downstream.py",
+    "scripts/create_paper_figures.py",
     "scripts/published_paper_results.py",
     "scripts/publish_best_weights.py",
 ]
@@ -216,6 +219,11 @@ def main():
               ignore=shutil.ignore_patterns("*.md"))
     compact_ablation(staging)
     compact_qualitative(staging)
+    subprocess.run([
+        sys.executable, str(ROOT / "scripts/create_paper_figures.py"),
+        "--archive-root", str(staging),
+        "--output", str(staging / "figures/analysis"),
+    ], cwd=ROOT, check=True)
 
     for name in ["requirements-cu130.txt", "requirements-cu130-lock.txt",
                  "requirements-venv.txt", "requirements-tf-gpu.txt"]:

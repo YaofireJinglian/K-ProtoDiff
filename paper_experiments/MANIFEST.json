@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-17T04:14:16.237693+00:00",
-  "source_commit": "7f35db6bf992a96594fe03853d5017a90a2722fd",
+  "generated_at_utc": "2026-09-17T04:50:07.234898+00:00",
+  "source_commit": "e2bb4f8c57647fda367b7e63750d23e77ca4c1d8",
   "record_counts": {
     "main_result_records": 226,
     "tuned_main_records": 30,
@@ -11,8 +11,8 @@
     "qualitative_structure_records": 36,
     "downstream_utility_records": 45
   },
-  "file_count": 714,
-  "total_bytes": 2041728,
+  "file_count": 725,
+  "total_bytes": 2887203,
   "files": [
     {
       "path": "README.md",
@@ -213,6 +213,56 @@
       "path": "environment/requirements-venv.txt",
       "bytes": 385,
       "sha256": "5a4d93ba26af73be248b04e1f975b14da0bcbc3e55c4ebca682e4b2fc7a8035b"
+    },
+    {
+      "path": "figures/analysis/README.md",
+      "bytes": 1077,
+      "sha256": "8b78feab0aada9f3b5b5a6023e4e6766dbcbe619ca931c0ea1b0b7f366991a56"
+    },
+    {
+      "path": "figures/analysis/main_result_rank_profile.pdf",
+      "bytes": 24170,
+      "sha256": "792a9ae11bd4afd7f208120cd2a47cafddcc065db92d386d7f1074ad674d4b2a"
+    },
+    {
+      "path": "figures/analysis/main_result_rank_profile.png",
+      "bytes": 149948,
+      "sha256": "3113a0300b7568b43017f66a7cb735f2f26970d711a8c4dc61d4820942f9c9d5"
+    },
+    {
+      "path": "figures/analysis/main_result_rank_profile.svg",
+      "bytes": 18368,
+      "sha256": "88dd1f82e53eb917f8a0300fbc9abd7d5af91d07381bb1d09ea8b18f2697e9e9"
+    },
+    {
+      "path": "figures/analysis/multiscale_prototype_ablation_heatmap.pdf",
+      "bytes": 26474,
+      "sha256": "05396a2a7ca2cfa05e19dd6179bcbba9e2733b061f3c740514e76403e4e2460e"
+    },
+    {
+      "path": "figures/analysis/multiscale_prototype_ablation_heatmap.png",
+      "bytes": 172199,
+      "sha256": "cafc73c859272949d6efa2673dba5a926ab9055453b97fb70a05c6e6d14dee42"
+    },
+    {
+      "path": "figures/analysis/multiscale_prototype_ablation_heatmap.svg",
+      "bytes": 25314,
+      "sha256": "e42df694547418000f419ac6a1716d7dfaf546a3723dc8001e7f4a6f27c5454e"
+    },
+    {
+      "path": "figures/analysis/sampling_speed_quality_pareto.pdf",
+      "bytes": 30462,
+      "sha256": "fceab986cfab8980d0852cda6a9cb37d7570524bf380c22a9fd0ec80660a3f28"
+    },
+    {
+      "path": "figures/analysis/sampling_speed_quality_pareto.png",
+      "bytes": 323724,
+      "sha256": "9b6729c416d64381ad9a7105bead74aa74eac3f928da4f1b53875f6bb329b2cb"
+    },
+    {
+      "path": "figures/analysis/sampling_speed_quality_pareto.svg",
+      "bytes": 59099,
+      "sha256": "5a13eba0ba7089983249374716413aaf770f07728f8e1ba8a9ddb5d64d770200"
     },
     {
       "path": "figures/qualitative/exchange_qualitative_structure.png",
@@ -3463,6 +3513,11 @@
       "path": "scripts/build_segment_dtw_table.py",
       "bytes": 2997,
       "sha256": "84cace082e0c6478809be7dd45286bc36c68baa69a23285e2c7377710726d4a7"
+    },
+    {
+      "path": "scripts/create_paper_figures.py",
+      "bytes": 14640,
+      "sha256": "38cb99146ba7ece074ea7c94308e49b2c68af4791cbbc71e95d026a124b06cea"
     },
     {
       "path": "scripts/download_fmri_dataset.py",
